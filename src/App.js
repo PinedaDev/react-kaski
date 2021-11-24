@@ -1,9 +1,10 @@
 import './App.css';
+import LoadingScreen from './components/LoadingScreen';
 
 function App() {
   return (
     <div className="Kaski-website">
-      <h1>"hello"</h1>
+      <LoadingScreen />
     </div>
   );
 }
