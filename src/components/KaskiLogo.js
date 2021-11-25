@@ -3,7 +3,7 @@ import React from 'react'
 const KaskiLogo = () => {
     return (
         <>
-            <span class="kaski_logo">
+            <span className="kaski_logo">
                 <svg xmlns="http://www.w3.org/2000/svg" width="138.714" height="60" viewBox="0 0 138.714 60">
                     <g id="Group_28" data-name="Group 28" transform="translate(-106.009 -149.623)">
                         <path id="Path_62" data-name="Path 62"
