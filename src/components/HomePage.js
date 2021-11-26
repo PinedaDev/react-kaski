@@ -1,8 +1,12 @@
 import React from "react";
+import "./css/HomePage.css"
+import background from "./img/bgImg.png"
+import SideNavBar from "./Home-Components/SideNavBar";
+import OverlayMenu from "./OverlayMenu";
 
 const HomePage = () => {
     return (
-        <div>
+        <div className="home_page">
             {/* main home page
             (background-img)
             (side navegation bar)
@@ -19,8 +23,19 @@ const HomePage = () => {
 
             (finnish key/design imgs)
          */}
+            <img src={background} style={imgStyle} alt="girl and window" />
+            <SideNavBar />
+            <OverlayMenu />
         </div>
     )
 }
-
 export default HomePage
+
+
+
+const imgStyle = {
+    position: "absolute",
+    left: "60%",
+    height: "100vh",
+    width: "40%",
+}
