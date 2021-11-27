@@ -8,6 +8,7 @@
     /* side nav menu */
     .sideMenu {
         position: absolute;
+        top: 0px;
         display: flex;
         height: 100%;
         background: rgba(255, 255, 255, 0.15);
@@ -24,5 +25,36 @@
     .icon:hover {
         color: #000;
     }
-    /* side menu overlay */
-    
+    /* utilities style  */
+    /* under logo text style */
+    .underLogoText {
+        cursor:default;
+        color: #C1C1C1;
+        font-size: 1.2em;
+        padding: 0.5rem 0 0 1rem;
+    }
+    /* home page links style */
+    .home_links {
+        margin: 5rem 2rem 5rem;
+    }
+    .home_links a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.4em;
+        padding: 0 0.5em;
+        transition: all 0.3s ease;
+        border-bottom: 2px solid transparent;
+    }
+    .home_links a:hover{
+        border-bottom: 2px solid #fdfdfd;
+        padding-bottom: 5px;
+    }
+/* slogan of the company  */
+#mainText {
+    color: #fdfdfd;
+    cursor:default;
+    line-height: 1em;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 6em;
+    margin-left: 0.5em;
+}

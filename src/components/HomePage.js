@@ -1,8 +1,16 @@
 import React, { useState } from "react";
 import "./css/HomePage.css"
 import background from "./img/bgImg.png"
-import SideNavBar from "./Home-Components/SideNavBar";
+
 import OverlayMenu from "./OverlayMenu";
+import KaskiLogo from "./KaskiLogo";
+import StoreLink from "./StoreLink";
+import SearchBtn from "./SearchBtn";
+
+import HomeNavegationLinks from "./Home-Components/HomeNavegationLinks";
+import MainSlogan from "./Home-Components/MainSlogan";
+import SideNavBar from "./Home-Components/SideNavBar";
+import UnderLogoText from "./Home-Components/UnderLogoText";
 
 const HomePage = ({ defaultState, showMenu, hideMenu }) => {
 
@@ -26,8 +34,16 @@ const HomePage = ({ defaultState, showMenu, hideMenu }) => {
             (finnish key/design imgs)
          */}
             <img src={background} style={imgStyle} alt="girl and window" />
-            <SideNavBar onClick={showMenu} />
             <OverlayMenu visibility={defaultState.visibility} hideMenu={hideMenu} opacity={defaultState.opacity} />
+            <KaskiLogo />
+            <StoreLink />
+            <SearchBtn />
+
+            <UnderLogoText />
+            <HomeNavegationLinks />
+            <MainSlogan />
+            <SideNavBar onClick={showMenu} />
+
         </div>
     )
 }
