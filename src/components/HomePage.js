@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import "./css/HomePage.css"
 import background from "./img/bgImg.png"
+import FinnishLogos from "./FinnishLogos";
 
 import OverlayMenu from "./OverlayMenu";
 import KaskiLogo from "./KaskiLogo";
-import StoreLink from "./StoreLink";
-import SearchBtn from "./SearchBtn";
+import UtilitiesContainer from "./Home-Components/UtilitiesContainer";
 
 import HomeNavegationLinks from "./Home-Components/HomeNavegationLinks";
 import MainSlogan from "./Home-Components/MainSlogan";
@@ -36,20 +36,20 @@ const HomePage = ({ defaultState, showMenu, hideMenu }) => {
             <img src={background} style={imgStyle} alt="girl and window" />
             <OverlayMenu visibility={defaultState.visibility} hideMenu={hideMenu} opacity={defaultState.opacity} />
             <KaskiLogo />
-            <StoreLink />
-            <SearchBtn />
-
+            <UtilitiesContainer />
             <UnderLogoText />
             <HomeNavegationLinks />
             <MainSlogan />
             <SideNavBar onClick={showMenu} />
-
+            {/* finnish logos  */}
+            <FinnishLogos />
         </div>
     )
 }
 export default HomePage
 
 const imgStyle = {
+    zIndex: "0",
     position: "absolute",
     left: "60%",
     height: "100vh",
