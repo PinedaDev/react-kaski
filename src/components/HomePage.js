@@ -3,6 +3,7 @@ import "./css/HomePage.css"
 import background from "./img/bgImg.png"
 import FinnishLogos from "./FinnishLogos";
 
+import LoadingScreen from "./LoadingScreen"
 import OverlayMenu from "./OverlayMenu";
 import KaskiLogo from "./KaskiLogo";
 import UtilitiesContainer from "./Home-Components/UtilitiesContainer";
@@ -33,9 +34,10 @@ const HomePage = ({ defaultState, showMenu, hideMenu }) => {
 
             (finnish key/design imgs)
          */}
+            <LoadingScreen />
             <img src={background} style={imgStyle} alt="girl and window" />
             <OverlayMenu visibility={defaultState.visibility} hideMenu={hideMenu} opacity={defaultState.opacity} />
-            <KaskiLogo />
+            <KaskiLogo marginLeft="6rem" />
             <UtilitiesContainer />
             <UnderLogoText />
             <HomeNavegationLinks />
