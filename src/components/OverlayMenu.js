@@ -1,15 +1,16 @@
 import React from 'react'
 import OverlayLink from "./OverlayLink"
+import CloseMenuBtn from "./CloseMenuBtn"
 import "./css/OverlayMenu.css"
-import { AiOutlineClose } from "react-icons/ai"
 
 
-const OverlayMenu = () => {
+const OverlayMenu = ({ visibility, opacity, hideMenu }) => {
+
     return (
-        <div className="overlay">
-            <div className="overlayContent">
+        <div className="overlay" style={{ visibility: visibility, opacity: opacity }}>
+            <div className="overlayContent" >
                 {/* button to closes the overlay menu */}
-                <AiOutlineClose className="closeBtn" />
+                <CloseMenuBtn hideMenu={hideMenu} />
                 {/* fist value assign the addres of the link second the link text displayed */}
                 <OverlayLink link="#" linkName="Home" />
                 <OverlayLink link="#" linkName="Blog" />
@@ -20,5 +21,6 @@ const OverlayMenu = () => {
         </div>
     )
 }
+
 
 export default OverlayMenu

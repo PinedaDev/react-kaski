@@ -2,10 +2,10 @@ import React from 'react'
 import "../css/HomePage.css"
 import MenuIcon from '../MenuIcon'
 
-const SideNavBar = () => {
+const SideNavBar = ({ onClick }) => {
     return (
         <div className="sideMenu">
-            <MenuIcon />
+            <MenuIcon onClick={onClick} />
         </div>
     )
 }

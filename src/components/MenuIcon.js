@@ -1,10 +1,10 @@
 import React from 'react'
 import "./css/HomePage.css"
 
-const MenuIcon = () => {
+const MenuIcon = ({ onClick }) => {
     return (
         <>
-            <i class="fas fa-ellipsis-v fa-3x icon"></i>
+            <i className="fas fa-ellipsis-v fa-3x icon" onClick={onClick}></i>
         </>
     )
 }
