@@ -2,12 +2,9 @@ import { AiOutlineClose } from "react-icons/ai"
 import "./css/OverlayMenu.css"
 
 const CloseMenuBtn = ({ hideMenu }) => {
-    function chgColor() {
-        console.log("click")
-    }
     return (
         <>
-            <AiOutlineClose className="clsBtn" onClick={hideMenu} onMouseOver={chgColor} />
+            <AiOutlineClose className="clsBtn" onClick={hideMenu} />
         </>
     )
 }
