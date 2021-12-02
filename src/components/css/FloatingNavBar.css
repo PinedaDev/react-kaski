@@ -1,0 +1,43 @@
+.floating_nav_bar {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items:  center;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 4rem;
+    width: 1000px;
+    background-color: rgba(255, 255, 255, 0.281);
+    z-index: 3;
+    border-radius: 70px;
+    margin-top: 10px;
+}
+/* kaki logo  */
+.logo {
+    margin:0 2rem 1rem;
+    width: 100px;
+}
+/* menu icon  */
+.icon {
+    margin-right: 2rem;
+    color: rgb(255, 255, 255);
+    transition: .5s;
+}
+.icon:hover {
+    color: #000;
+}
+/* navegation links  */
+.nav_link {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 20px;
+    text-decoration: none;
+    transition: .5s;
+}
+.nav_link:hover {
+    color: #000;
+}
+/* search and store link icons */
+.utilityIcon:hover {
+    color: rgb(255, 0, 0);
+}
