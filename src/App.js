@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
 import { useState } from "react/cjs/react.development";
-import HomePage from './components/HomePage';
+//pages
+import MainPage from './components/pages/MainPage';
 //Routing 
 import {
   BrowserRouter as Router,
@@ -33,6 +34,8 @@ function App() {
   // show the menu when click on an menu btn
   function showMenu() {
     setState(visibleOverlay)
+    console.log("hi")
+    console.log(defaultState)
   }
   // hide menu with the cross inside the overlay
   function hideMenu() {
@@ -42,7 +45,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<HomePage defaultState={defaultState} showMenu={showMenu} hideMenu={hideMenu} />} />
+        <Route path="/" element={<MainPage defaultState={defaultState} hideMenu={hideMenu} showMenu={showMenu} />} />
       </Routes>
     </Router>
   );

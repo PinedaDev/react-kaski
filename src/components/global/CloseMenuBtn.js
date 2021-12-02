@@ -1,5 +1,5 @@
 import { AiOutlineClose } from "react-icons/ai"
-import "./css/OverlayMenu.css"
+import "../css/OverlayMenu.css"
 
 const CloseMenuBtn = ({ hideMenu }) => {
     return (

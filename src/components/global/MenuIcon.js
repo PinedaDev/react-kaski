@@ -1,5 +1,5 @@
 import React from 'react'
-import "./css/HomePage.css"
+import "../css/Home_section.css"
 
 const MenuIcon = ({ onClick }) => {
     return (

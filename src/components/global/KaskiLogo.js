@@ -2,7 +2,7 @@ import React from 'react'
 
 const KaskiLogo = (props) => {
     return (
-        <svg style={{ marginLeft: props.marginLeft }} xmlns="http://www.w3.org/2000/svg" width="138.714" height="60" viewBox="0 0 138.714 60">
+        <svg style={{ marginLeft: props.marginLeft, marginTop: props.marginTop }} xmlns="http://www.w3.org/2000/svg" width="138.714" height="60" viewBox="0 0 138.714 60">
             <g id="Group_28" data-name="Group 28" transform="translate(-106.009 -149.623)">
                 <path id="Path_62" data-name="Path 62"
                     d="M233.149,172.33a1.187,1.187,0,0,0,.992.653h17.814L243.1,162.236a1.223,1.223,0,0,1,.124-1.6l-1.6,1.929-7.887,9.553c-.285.3-.483.341-.591.207"
@@ -30,11 +30,12 @@ const KaskiLogo = (props) => {
                     transform="translate(225.786 176.595)" fill="#fdfdfd" />
             </g>
         </svg>
-    )
-}
+    );
+};
 
 KaskiLogo.defaultProps = {
     marginLeft: "0",
-}
+    marginTop: "0",
+};
 
-export default KaskiLogo
+export default KaskiLogo;

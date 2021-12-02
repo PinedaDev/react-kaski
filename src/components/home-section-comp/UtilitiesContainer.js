@@ -1,6 +1,6 @@
 import React from 'react'
-import SearchBtn from '../SearchBtn'
-import StoreLink from '../StoreLink'
+import SearchBtn from '../global/SearchBtn'
+import StoreLink from '../global/StoreLink'
 
 const UtilitiesContainer = () => {
     return (

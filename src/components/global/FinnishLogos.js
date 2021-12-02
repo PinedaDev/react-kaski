@@ -1,5 +1,5 @@
-import avainlippu from "./img/avainlippu.png"
-import dff from "./img/DFF.png"
+import avainlippu from "../img/avainlippu.png"
+import dff from "../img/DFF.png"
 
 
 const FinnishLogos = () => {

@@ -1,6 +1,6 @@
 // dots bar to add to the loading_screen component
 import React from 'react'
-import "./css/loading_screen.css"
+import "../css/Loading_screen.css"
 
 const LoadingDots = () => {
     return (

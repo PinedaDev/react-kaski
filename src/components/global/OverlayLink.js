@@ -1,9 +1,10 @@
 import React from 'react'
+import { Link, NavLink } from 'react-router-dom'
 //
 const OverlayLink = ({ link, linkName }) => {
     return (
         <>
-            <a href={{ link }} className="menuItem">{linkName}</a>
+            <NavLink to={link} className="menuItem">{linkName}</NavLink>
         </>
     )
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import LoadingDots from "./LoadingDots"
 import KaskiLogo from "./KaskiLogo"
-import "./css/loading_screen.css"
+import "../css/Loading_screen.css"
 
 
 const LoadingScreen = () => {
@@ -23,7 +23,7 @@ const LoadingScreen = () => {
     function ScreenFade() {
         setState(screenUp)
     }
-    // set charging time for the loading screen (2s) 
+    // set charging time for the loading screen (2s)
     setTimeout(ScreenFade, 2000)
 
     return (
