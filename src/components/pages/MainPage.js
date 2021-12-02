@@ -13,6 +13,7 @@ const HomePage = ({ defaultState, hideMenu, showMenu }) => {
             <LoadingScreen />
             {/* {hidden overlay menu} */}
             <OverlayMenu visibility={defaultState.visibility} hideMenu={hideMenu} opacity={defaultState.opacity} />
+            {/* Floating nav var */}
             {/* {sections} */}
             <HomeSection showMenu={showMenu} />
             <ServicesSection />

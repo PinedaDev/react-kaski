@@ -4,20 +4,96 @@
 font-family: 'Montserrat', sans-serif; */
     
 .services_section {
+    position: relative;
     height: 100vh;
     width: 100%;
     background: linear-gradient(#5A0202,#ff2f2f);
     z-index: 1;
 }
 
-/* container for all the circles  */
+/* background text  */
+    .text {
+        position: absolute;
+        z-index: 1;
+        width: 80%;
+        cursor:default;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16em;
+        font-weight: bold;
+        color: rgba(255, 255, 255, 0.33);
+        z-index: 1;
+        margin: 0;
+        padding-top: 2%;
+    }
 
-        /* circles divs for each service properties  */
+/* container for all serv boxes  */
+    .services-container {
+        font-size: 20px;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 40%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+    /* service box component  */
+    .serv-box {
+        display: flex;  /*handler the content in the circle */
+        align-items:center;/*  set the text at the bottom */
+        justify-content: center; /*align the content at the center */
+        color: #ffffffb7;
+        float: left;
+        height: 260px;
+        width: 260px;
+        margin: 0 1em 1em;
+        border-radius: 50%;
+        transition: all .5s;
+        box-shadow: 10px 5px 10px rgba(31, 27, 27, 0.568);        
+    }
 
-        /* text inside the containers  */
+    .serv-box:hover {
+        transform: translateY(-30px)
+    }
 
-        /*centered icons*/
-
-        /* services-container background-properties */
-
+    /* text inside the service box */
+    .serv-box p {
+        height: 20px;
+        padding: 0;
+        margin-top: 10rem;
+        border-bottom: 1px solid transparent;
+    }
+    /*centered icons*/
+    .serv-box i {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-60%);
+    }
+        /* boxes background  */
+        #box1 {
+            background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../img/serv1.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        #box2 {
+            background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../img/serv2.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        #box3 {
+            background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../img/serv3.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        #box4 {
+            background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../img/serv4.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        #box5 {
+            background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../img/serv5.jpg);
+            background-size: cover;
+            background-position: center;
+        }
         /* wave divition between services and gallery section  */
