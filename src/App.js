@@ -3,6 +3,7 @@ import './App.css';
 import { useState } from "react/cjs/react.development";
 //pages
 import MainPage from './components/pages/MainPage';
+import Demopage from './components/pages/Demopage'
 //Routing 
 import {
   BrowserRouter as Router,
@@ -34,8 +35,6 @@ function App() {
   // show the menu when click on an menu btn
   function showMenu() {
     setState(visibleOverlay)
-    console.log("hi")
-    console.log(defaultState)
   }
   // hide menu with the cross inside the overlay
   function hideMenu() {
@@ -46,6 +45,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<MainPage defaultState={defaultState} hideMenu={hideMenu} showMenu={showMenu} />} />
+        <Route path="/pages/Demopage" element={<Demopage />} />
       </Routes>
     </Router>
   );

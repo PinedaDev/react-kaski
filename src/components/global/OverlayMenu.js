@@ -11,7 +11,7 @@ const OverlayMenu = ({ visibility, opacity, hideMenu }) => {
             <div className="overlayContent" >
                 {/* button to closes the overlay menu */}
                 <CloseMenuBtn hideMenu={hideMenu} />
-                {/* fist value assign the addres of the link second the link text displayed */}
+                {/* fist value (link) assign the addres of the link second (linkName) the link text displayed */}
                 <OverlayLink link="/" linkName="Home" />
                 <OverlayLink link="/pages/Demopage" linkName="Demo-Page" />
                 <OverlayLink link="#" linkName="Store" />

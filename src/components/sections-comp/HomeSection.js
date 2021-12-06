@@ -17,23 +17,6 @@ const HomeSection = ({ showMenu }) => {
 
     return (
         <div className="home_page_section">
-            {/* main home page
-            (background-img)
-            (side navegation bar)
-            (menu icon)
-            (overlay manu)
-
-            (Kaski logo)
-            (shoping link to the store and search utilities btns)
-            (text under the kaski logo)
-
-            (main navegation links)
-
-            (main text)
-
-            (finnish key/design imgs)
-            */}
-            {/* {home} */}
             <img src={background} style={imgStyle} alt="girl and window" />
             <KaskiLogo marginLeft="6rem" marginTop="1rem" />
             <UtilitiesContainer />
@@ -41,9 +24,7 @@ const HomeSection = ({ showMenu }) => {
             <HomeNavegationLinks />
             <MainSlogan />
             <SideNavBar showMenu={showMenu} />
-            {/* finnish logos */}
             <FinnishLogos />
-            {/* service*/}
         </div>
     )
 }

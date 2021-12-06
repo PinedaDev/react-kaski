@@ -4,7 +4,7 @@ import StoreLink from '../global/StoreLink'
 
 const UtilitiesContainer = () => {
     return (
-        <div className="container">
+        <div className="utilities_container">
             <SearchBtn />
             <StoreLink />
         </div>

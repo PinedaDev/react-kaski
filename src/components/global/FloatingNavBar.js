@@ -1,10 +1,11 @@
 //React comp
-import React from 'react'
+import React, { useRef } from 'react'
 import { NavLink } from 'react-router-dom'
 //Global comp
 import MenuIcon from './MenuIcon'
 import SearchBtn from './SearchBtn'
 import StoreLink from './StoreLink'
+import HomeSection from '../sections-comp/HomeSection'
 //Stiling and logo
 import img from '../img/withe-logo.png'
 import "../css/FloatingNavBar.css"
@@ -23,4 +24,7 @@ const FloatingNavBar = ({ showMenu }) => {
     )
 }
 
+let exporting = "hola"
+
+export let hello = exporting
 export default FloatingNavBar

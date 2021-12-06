@@ -9,7 +9,7 @@ const ServicesSection = () => {
 
     return (
         <div className="services_section">
-            <BackgroundText />
+            <BackgroundText text="Palvelut" />
             <ServicesContainer />
         </div>
     )

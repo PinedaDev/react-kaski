@@ -1,10 +1,10 @@
 import React from 'react'
 import "../css/ServicesSection.css"
 
-const BackgroundText = () => {
+const BackgroundText = ({ text }) => {
     return (
         <>
-            <p className="text">Palvelut</p>
+            <p className="text">{text}</p>
         </>
     )
 }
