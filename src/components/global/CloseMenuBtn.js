@@ -4,7 +4,7 @@ import "../css/OverlayMenu.css"
 const CloseMenuBtn = ({ hideMenu }) => {
     return (
         <>
-            <AiOutlineClose className="clsBtn" onClick={hideMenu} />
+            <AiOutlineClose className="cls_btn" onClick={hideMenu} />
         </>
     )
 }

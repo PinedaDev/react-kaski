@@ -8,6 +8,7 @@ import FloatingNavBar from "../global/FloatingNavBar"
 import HomeSection from "../sections-comp/HomeSection"
 import ServicesSection from "../sections-comp/ServicesSection"
 import LilGallerySection from "../sections-comp/LilGallerySection"
+import FooterSection from "../sections-comp/FooterSection"
 // useRef hook to check with js if its in the viewport
 
 const HomePage = ({ defaultState, hideMenu, showMenu }) => {
@@ -23,6 +24,7 @@ const HomePage = ({ defaultState, hideMenu, showMenu }) => {
             <HomeSection showMenu={showMenu} />
             <ServicesSection />
             <LilGallerySection />
+            <FooterSection />
         </div>
     )
 }

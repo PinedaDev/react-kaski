@@ -8,7 +8,7 @@ const OverlayMenu = ({ visibility, opacity, hideMenu }) => {
 
     return (
         <div className="overlay" style={{ visibility: visibility, opacity: opacity }}>
-            <div className="overlayContent" >
+            <div className="overlay_content" >
                 {/* button to closes the overlay menu */}
                 <CloseMenuBtn hideMenu={hideMenu} />
                 {/* fist value (link) assign the addres of the link second (linkName) the link text displayed */}

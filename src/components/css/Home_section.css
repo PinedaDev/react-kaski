@@ -1,12 +1,13 @@
 /* home section window */
 .home_page_section {
     position: relative;
+    overflow: hidden;
     margin: 0%;
     background: linear-gradient(#5a0101,#ff2626,#ff2626);
     height: 100vh;
 }
     /* side nav menu */
-    .sideMenu {
+    .side_menu {
         position: absolute;
         top: 0px;
         display: flex;
@@ -33,16 +34,16 @@
         top: 5%;
         left: 90%;
     }
-    .utilityIcon {
+    .utility_icon {
         padding-left: .5em;
         color: rgba(41, 39, 39, 0.801);
         transition: .3s;
     }
-    .utilityIcon:hover {
+    .utility_icon:hover {
         color: #be1d1d;
     }
     /* under logo text style */
-    .underLogoText {
+    .under_logo_text {
         position: absolute;
         cursor:default;
         color: #C1C1C1;
@@ -50,7 +51,7 @@
         padding-top: .75rem;
         padding-left: 1rem;
     }
-    .decorLineStyle  {
+    .decor_line_style  {
         position: absolute;
         height: 2.5rem;
         width: 0.5rem;

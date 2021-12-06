@@ -12,7 +12,7 @@
     transition: all 300ms ; /* 0.5 second transition effect to slide in the sidenav */ 
 }
 
-.overlayContent {
+.overlay_content {
     text-align: right;
     height: 100%;
     width: 20%;
@@ -20,7 +20,7 @@
     /* transition: all 200ms ease; */
 }
 
-.overlayContent .menuItem{
+.overlay_content .menu_item{
     text-align: left;
     padding: 20px 8px 8px 25px;
     padding: 20px 8px 8px 8px;
@@ -31,12 +31,12 @@
     transition: 0.3s;
 }
 
-.overlayContent .menuItem:hover {
+.overlay_content .menu_item:hover {
     border-left: 6px solid #ffffff;
 	background: rgba(150, 14, 14, 0.897);
 }
 
-.clsBtn {
+.cls_btn {
       color: #fff;
       top: 0;
       font-size: 4em;
@@ -45,6 +45,6 @@
       cursor: pointer;
       transition: .5s;
   }
-.clsBtn:hover {
+.cls_btn:hover {
     color: #000;
 }

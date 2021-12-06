@@ -1,4 +1,5 @@
 .little_gallery_section {
+    overflow: hidden;
     margin: 0;
     position: relative;
     height: 100vh;

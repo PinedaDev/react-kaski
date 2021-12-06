@@ -4,7 +4,7 @@ import MenuIcon from '../global/MenuIcon'
 
 const SideNavBar = ({ showMenu }) => {
     return (
-        <div className="sideMenu">
+        <div className="side_menu">
             <MenuIcon onClick={showMenu} />
         </div>
     )
