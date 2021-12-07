@@ -13,8 +13,7 @@
 
 // Working on: 
 
-Abraham: -(interface)Footer-section
-Abraham: -(interface)Gallery-section
+Abraham: -(interface) e-comerce page;
 
 // Good work practices:
 

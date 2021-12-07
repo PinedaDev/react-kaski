@@ -26,6 +26,9 @@ const LoadingScreen = () => {
     // set charging time for the loading screen (2s)
 
 
+    useEffect(() => {
+        setTimeout(ScreenFade, 2000)
+    }, [])
 
     return (
         // set the default status to the loading screen

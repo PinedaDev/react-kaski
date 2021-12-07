@@ -14,16 +14,16 @@ const FooterSection = () => {
         <div className="footer">
             <div>
                 <h2 className="colum_name">Contact-us</h2>
-                <p><a class="title" href="mailto:myynti@kaski.fi">myynti@kaski.fi : </a><a class="phone-num"
+                <p><a className="title" href="mailto:myynti@kaski.fi">myynti@kaski.fi : </a><a className="phone-num"
                     href="tel:+358504150450">050
                     4150 450</a>
                 </p>
-                <p class="title">Client Suport: <a class="phone-num" href="tel:+207924780"> 0207 924 780</a></p>
-                <p class="sub-text"> Open hours: <br></br> Mo-Fr 8-15</p>
-                <small class="sub-text">Call cost: 8,35 cent/puhelu + 16,69 cent/min </small>
-                <p><a class="title" href="#">Privacy statement</a></p>
-                <p><a class="title" href="#">E-commerce delivery and cancellation conditions</a></p>
-                <p><a class="contact-page-link" href="#">All contact info</a></p>
+                <p className="title">Client Suport: <a className="phone-num" href="tel:+207924780"> 0207 924 780</a></p>
+                <p className="sub-text"> Open hours: <br></br> Mo-Fr 8-15</p>
+                <small className="sub-text">Call cost: 8,35 cent/puhelu + 16,69 cent/min </small>
+                <p><a className="title" href="#">Privacy statement</a></p>
+                <p><a className="title" href="#">E-commerce delivery and cancellation conditions</a></p>
+                <p><a className="contact-page-link" href="#">All contact info</a></p>
             </div>
             <div>
                 <h2 className="colum_name">Offices</h2>

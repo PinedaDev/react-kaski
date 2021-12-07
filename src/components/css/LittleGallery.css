@@ -2,14 +2,12 @@
     overflow: hidden;
     margin: 0;
     position: relative;
-    height: 100vh;
+    height: 120vh;
     background: linear-gradient(#8f0d0d, #ff2f2f);
 }
 
 /* gallery section text  */
-.section_text {
-    font-size: 4rem;
-}
+
  /* link to the main gallery  */
 .link {
     text-decoration: none;
@@ -18,7 +16,7 @@
     position: absolute;
     text-align: center;
     margin: 0;
-    top: 95%;
+    top: 85%;
     left: 50%;
     transform: translateX(-50%);
     
@@ -42,11 +40,13 @@
     grid-template-areas:
       "main-img main-img img2 img3"
       "main-img main-img img4 img5";
-    height: 60%;
+    height: 50%;
     width: 80%;
+    z-index: 10;
   }
 .container div {
     border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, .5);
 }
 /* images */
   .main_img { 

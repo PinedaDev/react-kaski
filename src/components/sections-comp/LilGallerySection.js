@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 
 //outside comp
 import BackgroundText from "../services-section-comp/BackgroundText"
-
+import WaveDivition1 from '../global/WaveDivition1'
 //clases to assing divs backgrounds and area
 const imgList = ["main_img ", "img2", "img3", "img4", "img5"]
 
@@ -20,6 +20,7 @@ const LilGallery = () => {
                 <div className={imgList[4]}></div>
             </div>
             <NavLink className="link" to="/Gallery"> More </NavLink>
+            <WaveDivition1 />
         </div>
     )
 }

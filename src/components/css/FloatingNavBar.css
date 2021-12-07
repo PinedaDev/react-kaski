@@ -5,24 +5,18 @@
     align-items:  center;
     left: 50%;
     transform: translateX(-50%);
-    height: 4rem;
-    width: 1000px;
-    background-color: rgba(255, 255, 255, 0.281);
-    z-index: 3;
+    background-color: rgba(255, 255, 255, 0.381);
+    z-index: 100;
     border-radius: 70px;
     margin-top: 10px;
+    transition: .5s;
 }
 /* kaki logo  */
 .logo {
     margin:0 2rem 1rem;
     width: 100px;
 }
-/* menu icon  */
-.icon {
-    margin-right: 2rem;
-    color: rgb(255, 255, 255);
-    transition: .5s;
-}
+
 .icon:hover {
     color: #000;
 }

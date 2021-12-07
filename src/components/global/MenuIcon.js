@@ -1,12 +1,14 @@
 import React from 'react'
 import "../css/Home_section.css"
 
-const MenuIcon = ({ onClick }) => {
+const MenuIcon = (props) => {
     return (
         <>
-            <i className="fas fa-ellipsis-v fa-3x icon" onClick={onClick}></i>
+            <i style={{ margin: props.margin }} className="fas fa-ellipsis-v fa-3x menu_icon" onClick={props.onClick}></i>
         </>
     )
 }
-
+MenuIcon.defaultProps = {
+    margin: "0"
+}
 export default MenuIcon

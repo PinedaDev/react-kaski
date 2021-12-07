@@ -19,12 +19,12 @@
         align-items: center;
         }
 
-    .icon {
+    .menu_icon {
         color: #fff;
         cursor: pointer;
         transition: .15s;
     }
-    .icon:hover {
+    .menu_icon:hover {
         color: #000;
     }
     /* utilities style  */

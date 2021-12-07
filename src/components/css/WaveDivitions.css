@@ -1,0 +1,42 @@
+/* wave divition 1 */
+.wave_divition1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.wave_divition1 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 112px;
+}
+
+.wave_divition1 .shape-fill {
+    fill: #921A1A;
+}
+/* wave divition 2  */
+.wave_divition2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave_divition2 svg {
+    position: relative;
+    display: block;
+    width: calc(117% + 1.3px);
+    height: 132px;
+    transform: rotateY(180deg);
+}
+
+.wave_divition2 {
+    fill: #8f0d0d
+}
