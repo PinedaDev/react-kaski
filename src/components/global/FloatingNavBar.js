@@ -17,7 +17,7 @@ const FloatingNavBar = ({ showMenu, state }, ref) => {
             <NavLink className="nav_link" to="/Company">Company</NavLink>
             <SearchBtn />
             <StoreLink />
-            <MenuIcon margin="0 2rem 0 0" onClick={showMenu} />
+            <MenuIcon margin="0 2rem 0 2rem" onClick={showMenu} />
         </div>
     )
 }

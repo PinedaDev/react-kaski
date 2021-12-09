@@ -13,7 +13,7 @@
 
 // Working on: 
 
-Abraham: -(interface) e-comerce page;
+Abraham: -(interface) make the main page responsive;
 
 // Good work practices:
 

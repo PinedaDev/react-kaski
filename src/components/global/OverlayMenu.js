@@ -1,5 +1,5 @@
 import React from 'react'
-import OverlayLink from "./OverlayLink"
+import NavegationLink from "./NavegationLink"
 import CloseMenuBtn from "./CloseMenuBtn"
 import "../css/OverlayMenu.css"
 
@@ -12,11 +12,11 @@ const OverlayMenu = ({ visibility, opacity, hideMenu }) => {
                 {/* button to closes the overlay menu */}
                 <CloseMenuBtn hideMenu={hideMenu} />
                 {/* fist value (link) assign the addres of the link second (linkName) the link text displayed */}
-                <OverlayLink link="/" linkName="Home" />
-                <OverlayLink link="/pages/Demopage" linkName="Demo-Page" />
-                <OverlayLink link="#" linkName="Store" />
-                <OverlayLink link="#" linkName="Company" />
-                <OverlayLink link="#" linkName="Contact" />
+                <NavegationLink passedCalss="menu_item" link="/" linkName="Home" />
+                <NavegationLink passedCalss="menu_item" link="/pages/Demopage" linkName="Demo-Page" />
+                <NavegationLink passedCalss="menu_item" link="/pages/StorePage" linkName="Store" />
+                <NavegationLink passedCalss="menu_item" link="#" linkName="Company" />
+                <NavegationLink passedCalss="menu_item" link="#" linkName="Contact" />
             </div>
         </div>
     )

@@ -3,6 +3,7 @@ import './App.css';
 import { useState } from "react/cjs/react.development";
 //pages
 import MainPage from './components/pages/MainPage';
+import StorePage from './components/pages/StorePage';
 import Demopage from './components/pages/Demopage'
 //Routing 
 import {
@@ -46,6 +47,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPage defaultState={defaultState} hideMenu={hideMenu} showMenu={showMenu} />} />
         <Route path="/pages/Demopage" element={<Demopage />} />
+        <Route path="/pages/StorePage" element={<StorePage defaultState={defaultState} hideMenu={hideMenu} showMenu={showMenu} />} />
       </Routes>
     </Router>
   );
