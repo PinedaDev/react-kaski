@@ -22,8 +22,8 @@ const StaticNavBar = ({ showMenu }) => {
             </nav>
             <nav className="last_links">
                 <SearchBtn />
-                <StoreLink margin="0 2rem 0 0" />
-                <MenuIcon className="static_store_link" margin="0 2rem 0 0" onClick={showMenu} />
+                <StoreLink />
+                <MenuIcon className="static_store_link" margin="0 1rem 0 1rem" onClick={showMenu} />
             </nav>
         </div>
     )
