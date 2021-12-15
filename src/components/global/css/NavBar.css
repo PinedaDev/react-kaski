@@ -1,0 +1,46 @@
+.nav-bar {
+    position: fixed;
+
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 5px 20px black;
+    border-bottom-left-radius: 17px;
+    border-bottom-right-radius: 17px;
+}
+
+.text-links {
+    display: none;
+}
+
+.icon-links {
+    margin-right: 10px;
+}
+.menu-icon {
+    margin-left: 10px;
+    transition: .3s;
+}
+.menu-icon:hover {
+    color: #fff;
+}
+.search-icon{
+    height: 30px;
+    border-bottom: 2px transparent;
+    transition:all .5s ease-in-out;
+}
+.search-icon:hover{
+    margin: 0;
+    border-bottom: 2px solid #000;
+}
+.cart-icon {
+    height: 35px;
+    border-bottom: 2px transparent;
+    transition:all .5s ease-in-out;
+}
+.cart-icon:hover{
+    margin: 0;
+    border-bottom: 2px solid #000;
+}

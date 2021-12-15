@@ -1,6 +1,7 @@
 import React from 'react'
 import './css/MainPage.css'
 import LoadingScreen from '../components/global/LoadingScreen'
+import NavBar from '../components/global/NavBar'
 //sections
 import Home from '../components/main-page-components/home/Home'
 
@@ -8,7 +9,9 @@ import Home from '../components/main-page-components/home/Home'
 const MainPage = () => {
     return (
         <div className='main-page'>
-            {<LoadingScreen />}
+            <LoadingScreen />
+            <NavBar />
+            <Home />
         </div>
     )
 }
