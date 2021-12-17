@@ -1,0 +1,79 @@
+.services-section {
+    position: relative;
+    background: linear-gradient(#5A0202,#ff2f2f);
+}
+
+.services-section > p {
+    margin: 0 0 4rem 0 ;
+    padding-top: 4rem;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.33);
+}
+
+.services-container {
+    display: flexbox;
+    padding: 3rem 0;
+}
+
+.service-box {
+    position: relative;
+    display: flex;  /*handler the content in the circle */
+    align-items:center;/*  set the text at the bottom */
+    justify-content: center; /*align the content at the center */
+    color: #ffffffb7;
+    height: 260px;
+    width: 260px;
+    margin: auto;
+    margin-bottom: 4rem;
+    border-radius: 50%;
+    transition: all .5s;
+    box-shadow: 10px 5px 10px rgba(31, 27, 27, 0.568);        
+}
+.service-box:hover {
+    transform: translateY(-20%);
+}
+
+/* text inside the service box */
+.service-box p {
+    height: 20px;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 1.5em;
+    padding-top: 4rem;
+    border-bottom: 1px solid transparent;
+    text-shadow: 10px 5px 10px rgba(31, 27, 27, 0.568); 
+}
+/*centered icons*/
+.service-box i {
+    position: absolute;
+    top: 30%;
+}
+
+#service1 {
+    background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,0.5)), url(../../../../img/services-imgs/serv1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#service2 {
+    background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,0.5)), url(../../../../img/services-imgs/serv2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#service3 {
+    background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,0.5)), url(../../../../img/services-imgs/serv3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#service4 {
+    background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,0.5)), url(../../../../img/services-imgs/serv4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#service5 {
+    background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,0.5)), url(../../../../img/services-imgs/serv5.jpg);
+    background-size: cover;
+    background-position: center;
+}

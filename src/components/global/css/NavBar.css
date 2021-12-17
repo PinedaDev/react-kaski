@@ -1,13 +1,12 @@
 .nav-bar {
     position: fixed;
-
-    overflow: hidden;
+    z-index: 2;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background: rgba(255, 255, 255, 0.45);
-    box-shadow: 0 5px 20px black;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.383);
     border-bottom-left-radius: 17px;
     border-bottom-right-radius: 17px;
 }
@@ -20,6 +19,7 @@
     margin-right: 10px;
 }
 .menu-icon {
+    cursor: pointer;
     margin-left: 10px;
     transition: .3s;
 }

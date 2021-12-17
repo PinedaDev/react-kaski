@@ -7,21 +7,20 @@ import './css/NavBar.css'
 
 
 
-const NavBar = () => {
+const NavBar = ({ showMenu }) => {
     return (
         <div className='nav-bar'>
             <KaskiLogo />
-
             <div className='links'>
                 <div className='text-links'>
-                    <NavLink to="" >Home</NavLink>
-                    <NavLink to="" >Doors</NavLink>
-                    <NavLink to="" >Company</NavLink>
+                    <NavLink className="nav-link" to="" >Windows</NavLink>
+                    <NavLink className="nav-link" to="" >Doors</NavLink>
+                    <NavLink className="nav-link" to="" >Company</NavLink>
                 </div>
                 <div className='icon-links'>
                     <i><NavLink to="/pages/store"><img className='cart-icon' src={cartIcon} alt="cart icon" /></NavLink></i>
                     <i><img className='search-icon' src={searchIcon} alt="search icon" /></i>
-                    <i className="fas fa-ellipsis-v fa-2x menu-icon"></i>
+                    <i onClick={showMenu} className="fas fa-ellipsis-v fa-2x menu-icon"></i>
                 </div>
             </div>
         </div>

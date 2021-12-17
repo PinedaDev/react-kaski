@@ -1,4 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Fredericka+the+Great&family=Montserrat:wght@300;800&display=swap');
+/*
+font-family: 'Caveat', cursive;
+font-family: 'Fredericka the Great', cursive;
+font-family: 'Montserrat', sans-serif;
+*/
+
 .main-page {
+    position: relative;
     margin: 0;
-    background: coral;
+    background: rgb(165, 105, 83);
 } 
+
+/* mobile divices */
+@media only screen and (min-width: 700px) {
+    /* home section */
+    div .home-section {
+        background: linear-gradient( rgba(242, 30, 30, .6), rgba(121, 15, 15, .9)),url('../.././img/backgrounds/home.jpg');
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+    }
+    .decor-text  span {
+        margin-left: .5rem;
+        padding-top: .5rem;
+    }
+
+    .home-section .decor-line {
+        display: initial;
+        background-color: rgb(255, 255, 255);
+        width: .5em;
+        height: 2em;
+    }
+    div .section-content p {
+        font-size: 4em;
+    }
+    div .mobile-links-container {
+        display: flex;
+        justify-content: space-around;
+    }
+    button.offert-btn {
+        display: initial;
+    }
+    /* services section  */
+
+    div .services-section {
+        background: linear-gradient(rgba(90, 2, 2, 0.4),rgba(255, 47, 47, 0.4)),url('../../img/backgrounds/home.jpg');
+    }
+    div .services-section > p {
+        font-size: 5em;
+        margin: 0 0 1rem 0;
+    }
+    /* small gallery section  */
+    div .small-gallery-section {
+        background: url('../../img/backgrounds/gallery.jpg');
+    }
+
+    :nth-child(1).gall-background-text {
+        font-size: 5em;
+        margin-bottom: 1rem;
+    }
+    div .img-container {
+        height: 20rem;
+    }
+    /* contact  */
+
+}
+/* PC */
+@media only screen and (min-width: 1024px) {
+    /* navegation bar */
+    div .nav-bar {
+        position: absolute;
+    }
+    div.links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    div.text-links {
+        display: flex;
+    }
+    div.icon-links{
+        display: inline-block;
+    }
+    div .nav-link {
+        color: #000;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        font-size: 1.2em;
+        background: transparent;
+        text-decoration: none;
+        padding: 0 1rem;
+        border-bottom: 2px solid transparent;
+        transition: all .3s ease-in-out;
+    }
+    .nav-link:hover {
+        padding-bottom: 5px;
+        border-bottom: 2px solid #000;
+    }
+
+    /* home section */
+    div .girl-home-picture {
+        display: initial;
+        position: absolute;
+        z-index: 0;
+        height: 100%;
+        width:50%;
+        top: 0;
+        left: 50%;
+    }
+    div .mobile-links-container {
+        display: none;
+    }
+    .decor-text {
+        margin-left: 3rem;
+        padding-top: 5rem;
+    }
+    .home-section .decor-span {
+        display: initial;
+        background-color: rgb(255, 255, 255);
+        width: .5em;
+        height: 2em;
+    }
+    div .section-content p {
+        display: block;
+        text-align: left;
+        width: 50%;
+        font-size: 5em;
+        margin-left: 3rem;
+        margin-top: 6rem;
+    }
+    div .logos-container {
+        position: absolute;
+        top: 85%;
+        left: 5%;
+    }
+    /* services section  */
+}
+
