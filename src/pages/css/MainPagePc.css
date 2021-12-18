@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Fredericka+the+Great&family=Montserrat:wght@300;800&display=swap');
+
+/* PC */
+@media only screen and (min-width: 1024px) {
+    /* navegation bar */
+    div .nav-bar {
+        position: absolute;
+    }
+    div.links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 3rem;
+    }
+    div.text-links {
+        display: flex;
+    }
+    div.icon-links{
+        display: inline-block;
+    }
+    div.icon-links i{
+        margin: 0 1rem;
+    }
+    div .nav-link {
+        color: #000;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 1.2em;
+        background: transparent;
+        text-decoration: none;
+        padding: 0 1rem;
+        border-bottom: 2px solid transparent;
+        transition: all .3s ease-in-out;
+    }
+    .nav-link:hover {
+        padding-bottom: 5px;
+        border-bottom: 2px solid #000;
+    }
+
+    i.menu-icon {
+        transform: rotate(90deg);
+    }
+    /* floating nav bar */
+    div.floating-nav-bar {
+        display: flex;
+    }
+    /* extra btns */
+    button.offert-btn {
+        display: initial;
+    }
+    div.chat-bot-btn {
+        display: flex;
+    }
+    /* home section */
+    div .girl-home-picture {
+        display: initial;
+        position: absolute;
+        z-index: 0;
+        height: 100%;
+        width:50%;
+        top: 0;
+        left: 50%;
+    }
+    div .mobile-links-container {
+        display: none;
+    }
+    .decor-text {
+        margin-left: 3rem;
+        padding-top: 5rem;
+    }
+    .home-section .decor-span {
+        display: initial;
+        background-color: rgb(255, 255, 255);
+        width: .5em;
+        height: 2em;
+    }
+    div .section-content p {
+        display: block;
+        text-align: left;
+        width: 50%;
+        font-size: 5em;
+        margin-left: 3rem;
+        margin-top: 6rem;
+    }
+    div.home-section .logos-container {
+        position: absolute;
+        top: 85%;
+        left: 5%;
+    }
+    /* services section  */
+    .services-section {
+        display: flex;
+        height: 100vh;
+    }
+    div.services-container {
+        display: flex;
+        margin: auto;
+    }
+    div .service-box  {
+        margin: 0 1rem;
+        height: 10rem;
+        width: 10rem;
+    }
+    div.services-section > p {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 10em;
+    }
+    div.service-box p {
+        font-size: 1em;
+    }
+    /* Samall gallery */
+    div.small-gallery-section p {
+        margin: 0 0 4rem 0 ;
+        padding-top: 4rem;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12em;
+        font-weight: bold;
+        color: rgba(255, 255, 255, 0.33);    
+    }
+    .imgs-container {
+        display: grid;
+        grid-template-areas: 
+        "main img2 img4"
+        "main img3 img4"
+        ;
+        margin: auto;
+        grid-row-gap: 1rem;
+    }
+    
+    .img-container {
+        border-radius: 20px;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.33);
+    }
+    div.main-img {
+        grid-area: main;
+        height: 24rem;
+    }
+    div.img2 {
+        grid-area: img2;
+        height: 11rem;
+    }
+    div.img3 {
+        grid-area: img3;
+        height: 11rem;
+    }
+    div.img4 {
+        grid-area: img4;
+        height: 24rem;
+    }
+
+    div.small-gallery-section .link-to-gallery {
+        font-size: 3em;
+    }
+    /* Contact */
+    div.info-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    div .section-content p {
+        font-size: 6em;
+    }
+    /* Services */
+    div.services-section > p {
+        font-size: 15em;
+    }
+    div .service-box  {
+        margin: 0 2rem;
+        height: 12rem;
+        width: 12rem;
+    }
+}

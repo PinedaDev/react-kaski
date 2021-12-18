@@ -1,6 +1,6 @@
 .nav-bar {
     position: fixed;
-    z-index: 2;
+    z-index: 6;
     width: 100%;
     display: flex;
     align-items: center;
@@ -43,4 +43,8 @@
 .cart-icon:hover{
     margin: 0;
     border-bottom: 2px solid #000;
+}
+
+.text-links > .active {
+    font-weight: bold;
 }

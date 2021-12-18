@@ -13,12 +13,14 @@ const NavBar = ({ showMenu }) => {
             <KaskiLogo />
             <div className='links'>
                 <div className='text-links'>
-                    <NavLink className="nav-link" to="" >Windows</NavLink>
-                    <NavLink className="nav-link" to="" >Doors</NavLink>
-                    <NavLink className="nav-link" to="" >Company</NavLink>
+                    <NavLink className="nav-link" to="/" >Home</NavLink>
+                    <NavLink className="nav-link" to="/pages/windows" >Windows</NavLink>
+                    <NavLink className="nav-link" to="/pages/doors" >Doors</NavLink>
+                    <NavLink className="nav-link" to="/pages/company" >Company</NavLink>
+                    <NavLink className="nav-link" to="/pages/Kaski-Online-Store" >Store</NavLink>
                 </div>
                 <div className='icon-links'>
-                    <i><NavLink to="/pages/store"><img className='cart-icon' src={cartIcon} alt="cart icon" /></NavLink></i>
+                    <i><NavLink to="/pages/Kaski-Online-Store"><img className='cart-icon' src={cartIcon} alt="cart icon" /></NavLink></i>
                     <i><img className='search-icon' src={searchIcon} alt="search icon" /></i>
                     <i onClick={showMenu} className="fas fa-ellipsis-v fa-2x menu-icon"></i>
                 </div>

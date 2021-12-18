@@ -28,7 +28,7 @@ const SmallGallery = () => {
 
     return (
         <div className='small-gallery-section'>
-            <p className='gall-background-text'>Inspiroidu</p>
+            <p>Inspiroidu</p>
             <div className='imgs-container'>
                 {imgs()}
             </div>

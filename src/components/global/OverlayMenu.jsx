@@ -27,7 +27,7 @@ const OverlayMenu = ({ defOverlay, hideMenu }) => {
         {
             id: "shop",
             name: 'Shop',
-            link: '/pages/shop',
+            link: '/pages/Kaski-Online-Store',
             class: 'menu-item'
         },
         {

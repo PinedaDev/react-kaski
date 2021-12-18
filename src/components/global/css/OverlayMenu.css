@@ -37,7 +37,7 @@
 	background: rgba(150, 14, 14, 0.897);
 }
 
-.active {
+div.overlay .active {
     background: rgba(150, 14, 14, 0.897);
 }
 

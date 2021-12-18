@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { NavLink } from 'react-router-dom'
 import './css/Home.css'
 import girlPhoto from '../../../img/backgrounds/girl-and-bunny-img.png'
 import avainLippu from "../../../img/logos/avainlippu.png"
 import dff from "../../../img/logos/DFF.png"
 
-const Home = () => {
+const Home = (props, ref) => {
     return (
         <div className='home-section'>
             <div className='section-content'>
@@ -13,7 +13,7 @@ const Home = () => {
                     <div className='decor-line'></div>
                     <span>Ikkunat ja ovet - Stiä maankuulua Kaski-laatua</span>
                 </div>
-                <p>Tunnelma tulee ikkunoista ja ovesta</p>
+                <p ref={ref}>Tunnelma tulee ikkunoista ja ovesta</p>
 
                 <div className='mobile-links-container'>
                     <NavLink className="mobile-home-link" to="/pages/Windows">Windows</NavLink>
@@ -29,4 +29,6 @@ const Home = () => {
     )
 }
 
-export default Home
+const fowarTextRef = React.forwardRef(Home);
+
+export default fowarTextRef
