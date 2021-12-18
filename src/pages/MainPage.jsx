@@ -53,7 +53,7 @@ const MainPage = ({ defOverlay, showMenu, hideMenu }) => {
     return (
         <div className='main-page'>
             <OverlayMenu defOverlay={defOverlay} hideMenu={hideMenu} />
-            <LoadingScreen />
+
             <NavBar showMenu={showMenu} />
             <OffertForm />
             <ChatBot />

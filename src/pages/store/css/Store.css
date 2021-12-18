@@ -39,17 +39,17 @@ position: absolute;
 overflow-y: auto;
 
 display: grid;
-grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 grid-template-rows: 1fr 1fr;
 grid-gap: 2rem;
 padding: 1rem;
 
 background-color: rgba(0, 0, 0, .1);
 border-radius: 50px;
-top: 15%;
+top: 20%;
 left: 50%;
 transform: translateX(-50%);
-height: 80%;
+height: 70%;
 width: 90%;
 backdrop-filter: blur(5px);    
 
