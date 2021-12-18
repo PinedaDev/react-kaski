@@ -1,6 +1,7 @@
 import React from 'react'
 import NavBar from '../../components/global/NavBar'
 import OverlayMenu from '../../components/global/OverlayMenu'
+import StoreItem from '../../components/store-components/StoreItem'
 import './css/Store.css'
 
 const Store = ({ defOverlay, showMenu, hideMenu }) => {
@@ -14,7 +15,7 @@ const Store = ({ defOverlay, showMenu, hideMenu }) => {
             </div>
 
             <div className='store-items-container'>
-
+                <StoreItem />
             </div>
         </div>
     )

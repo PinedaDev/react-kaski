@@ -6,7 +6,7 @@ const StoreAddBtn = ({ state, onHover, mouseOut }) => {
             style={{ width: state.btnWidth, background: state.btnBackground }}
             onMouseOut={mouseOut}
             onMouseOver={onHover}
-            className="store_item_btn add_to_btn">
+            className="store-item-btn add-to-btn">
             <i
                 style={{ opacity: state.iconOpacity }}
                 className="fas fa-cart-plus fa-2x"></i>

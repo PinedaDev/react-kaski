@@ -1,0 +1,61 @@
+
+.store-item {
+    position: relative;
+    
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3em;
+
+    height: 15rem;
+    width: 15rem;
+
+    border-radius: 20px;
+    box-shadow: 8px 8px 10px rgba(20, 23, 37, 0.6);
+}
+
+/* item top section  */
+/* inside btn  */
+.store-item-btn {
+    display: flex; 
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 15%;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.store-item-btn i{
+    color: #000;
+}
+.buy-now-btn {
+    margin: 10px 10px 0;
+    float: left;
+}
+.add-to-btn {
+    margin: 10px 10px 0;
+    float: right;
+}
+.hidden-text {
+    position: absolute ;
+    color: #fff;
+    opacity: 0;
+    transition: all .3s ease;
+}
+/* item bottom section  */
+.store-item-details {
+    position: absolute;
+    top: 70%;
+    background-color: rgb(10, 13, 29);
+    height: 30%;
+    width: 100%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;    
+}
+
+.store-item-details p {
+    margin: 0;
+    padding-top: 10px;
+    text-align: center;
+    color: #fff;    
+}

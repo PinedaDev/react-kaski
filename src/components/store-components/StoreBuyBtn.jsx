@@ -6,7 +6,7 @@ const StoreBuyBtn = ({ state, onHover, mouseOut }) => {
             style={{ width: state.btnWidth, background: state.btnBackground }}
             onMouseOut={mouseOut}
             onMouseOver={onHover}
-            className="store_item_btn buy_now_btn">
+            className="store-item-btn buy-now-btn">
             <i
                 style={{ opacity: state.iconOpacity }}
                 className="fas fa-credit-card fa-2x"></i>
