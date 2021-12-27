@@ -2,6 +2,10 @@
 
 /* PC */
 @media only screen and (min-width: 1024px) {
+    /* overlay */
+    div .overlay-content {
+        width: 20%;
+    }
     /* navegation bar */
     div .nav-bar {
         position: absolute;
@@ -15,8 +19,11 @@
     div.text-links {
         display: flex;
     }
-    div.icon-links{
-        display: inline-block;
+    div.store-page .nav-bar .icon-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
     }
     div.icon-links i{
         margin: 0 1rem;
@@ -46,7 +53,7 @@
     }
     /* extra btns */
     button.offert-btn {
-        display: initial;
+        display: block;
     }
     div.chat-bot-btn {
         display: flex;

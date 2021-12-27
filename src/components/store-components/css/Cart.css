@@ -1,0 +1,17 @@
+.cart-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,.5);
+    z-index: 999;
+}
+.cart-overlay-content {
+    position: relative;
+    background: linear-gradient(to bottom right,#E27D7D,#B50000);
+    float: right;
+    width: 25%;
+    height: 100%;
+}
+.cart-overlay-content > p {
+    text-align: center;
+}

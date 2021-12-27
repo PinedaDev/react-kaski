@@ -10,4 +10,5 @@ font-family: 'Montserrat', sans-serif;
     margin: 0;
     background: rgb(165, 105, 83);
     scroll-behavior: smooth;
+    overflow-x: hidden;
 } 

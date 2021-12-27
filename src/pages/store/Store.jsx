@@ -3,6 +3,7 @@ import NavBar from '../../components/global/NavBar'
 import OverlayMenu from '../../components/global/OverlayMenu'
 import StoreItem from '../../components/store-components/StoreItem'
 import Filter from '../../components/store-components/Filter'
+import Cart from '../../components/store-components/Cart'
 import './css/Store.css'
 
 const Store = ({ defOverlay, showMenu, hideMenu }) => {
@@ -31,19 +32,25 @@ const Store = ({ defOverlay, showMenu, hideMenu }) => {
         {
             id: "1",
             name: "The Window",
-            price: "10€",
+            price: 10,
             category: "windows"
         },
         {
             id: "2",
             name: "The Door",
-            price: "15€",
+            price: 15,
             category: "doors"
         },
         {
             id: "3",
             name: "The Part",
-            price: "5€",
+            price: 5,
+            category: "parts"
+        },
+        {
+            id: "4",
+            name: "another Part",
+            price: 5,
             category: "parts"
         },
     ]
@@ -52,9 +59,9 @@ const Store = ({ defOverlay, showMenu, hideMenu }) => {
             return true
         }
     })
-
+    //show all the items when the current category is All if it's not use the filtered item list to render de itmes
     const showItems = () => {
-        //show all the items when the current category is All if it's not use the filtered item list to render de itmes
+
         if (currentCategory == "All") {
             return (
                 items.map((item) => {
@@ -74,10 +81,12 @@ const Store = ({ defOverlay, showMenu, hideMenu }) => {
         }
     }
     //
+    const itemsToCart = []
     return (
         <div className='store-page'>
             <NavBar showMenu={showMenu} />
             <OverlayMenu defOverlay={defOverlay} hideMenu={hideMenu} />
+            <Cart itemsInCart={items} />
             <Filter activeCategory={currentCategory} filterOptions={filterOptions} />
             <div className='store-items-container'>
                 {showItems()}

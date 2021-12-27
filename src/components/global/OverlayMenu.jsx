@@ -15,7 +15,7 @@ const OverlayMenu = ({ defOverlay, hideMenu }) => {
         {
             id: "windows",
             name: 'Windows',
-            link: '/pages/windows',
+            link: '/pages/Kaski-Windows',
             class: 'menu-item'
         },
         {
@@ -42,7 +42,7 @@ const OverlayMenu = ({ defOverlay, hideMenu }) => {
         return (
             menuItems.map((item) => {
                 return (
-                    <NavLink className={item.class} key={item.id} to={item.link}>{item.name}</NavLink>
+                    <NavLink onClick={hideMenu} className={item.class} key={item.id} to={item.link}>{item.name}</NavLink>
                 );
             })
         );

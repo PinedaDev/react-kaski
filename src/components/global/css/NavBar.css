@@ -16,6 +16,9 @@
 }
 
 .icon-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-right: 10px;
 }
 .menu-icon {
@@ -44,7 +47,9 @@
     margin: 0;
     border-bottom: 2px solid #000;
 }
-
+.basket-icon {
+    display: none;
+}
 .text-links > .active {
     font-weight: bold;
 }

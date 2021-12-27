@@ -14,13 +14,13 @@ const NavBar = ({ showMenu }) => {
             <div className='links'>
                 <div className='text-links'>
                     <NavLink className="nav-link" to="/" >Home</NavLink>
-                    <NavLink className="nav-link" to="/pages/windows" >Windows</NavLink>
+                    <NavLink className="nav-link" to="/pages/Kaski-Windows" >Windows</NavLink>
                     <NavLink className="nav-link" to="/pages/doors" >Doors</NavLink>
                     <NavLink className="nav-link" to="/pages/company" >Company</NavLink>
-                    <NavLink className="nav-link" to="/pages/Kaski-Online-Store" >Store</NavLink>
                 </div>
                 <div className='icon-links'>
                     <i><NavLink to="/pages/Kaski-Online-Store"><img className='cart-icon' src={cartIcon} alt="cart icon" /></NavLink></i>
+                    <i className="fas fa-shopping-basket basket-icon"><div className='basket-counter'></div></i>
                     <i><img className='search-icon' src={searchIcon} alt="search icon" /></i>
                     <i onClick={showMenu} className="fas fa-ellipsis-v fa-2x menu-icon"></i>
                 </div>
