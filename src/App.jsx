@@ -5,6 +5,7 @@ import { useState } from "react/cjs/react.development";
 import MainPage from './pages/MainPage';
 import Store from './pages/store/Store';
 import Windows from './pages/windows/Windows';
+import Doors from './pages/doors/Doors';
 //import Demopage from './components/pages/Demopage'
 //Routing 
 import {
@@ -49,6 +50,7 @@ function App() {
         <Route path="/" element={<MainPage defOverlay={overlayState} showMenu={showOverlayMenu} hideMenu={hideOverlayMenu} />} />
         <Route path="/pages/Kaski-Online-Store" element={<Store defOverlay={overlayState} showMenu={showOverlayMenu} hideMenu={hideOverlayMenu} />} />
         <Route path="/pages/Kaski-Windows" element={<Windows defOverlay={overlayState} showMenu={showOverlayMenu} hideMenu={hideOverlayMenu} />} />
+        <Route path="/pages/Kaski-Doors" element={<Doors defOverlay={overlayState} showMenu={showOverlayMenu} hideMenu={hideOverlayMenu} />} />
       </Routes>
     </Router>
   )

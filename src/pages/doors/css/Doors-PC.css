@@ -1,0 +1,71 @@
+@media only screen and (min-width: 700px) {
+    .doors-bg-container {
+        background: linear-gradient(rgba(187, 0, 0, .6),rgba(187,0,0,.6)),url(../../../img/backgrounds/doors-bg.jpg);
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+        z-index: 67;
+    }
+    div .doors-page-content {
+        position: absolute;
+        top: 0;
+    }
+    .categories-container {
+        display: grid;
+        width: 95%;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    
+    .category-container {
+        font-size: 1em;
+        height: 200px;
+        width: 200px;
+    }
+    
+    .category-container:hover {
+        font-size: 1.5em;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    
+    .page-header {
+        margin-bottom: 6rem;
+        font-weight: 600;
+    }
+    .page-text {
+        font-size: 1.5em;
+        margin: 0 4rem 6rem 4rem;
+    }
+
+    .category-container {
+        font-size: 1.2em;
+        height: 250px;
+        width: 250px;
+    }
+    
+    .category-container:hover {
+        font-size: 1.5em;
+    }
+}
+@media only screen and (min-width: 1280px) {
+    
+    .page-header {
+        margin-bottom: 8rem;
+    }
+    .page-text {
+        font-size: 1.5em;
+        margin: 0 4rem 6rem 4rem;
+    }
+
+    .category-container {
+        font-size: 1.5em;
+        height: 300px;
+        width: 300px;
+    }
+    
+    .category-container:hover {
+        font-size: 2em;
+    }
+}

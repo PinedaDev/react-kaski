@@ -15,7 +15,7 @@ const NavBar = ({ showMenu }) => {
                 <div className='text-links'>
                     <NavLink className="nav-link" to="/" >Home</NavLink>
                     <NavLink className="nav-link" to="/pages/Kaski-Windows" >Windows</NavLink>
-                    <NavLink className="nav-link" to="/pages/doors" >Doors</NavLink>
+                    <NavLink className="nav-link" to="/pages/Kaski-Doors" >Doors</NavLink>
                     <NavLink className="nav-link" to="/pages/company" >Company</NavLink>
                 </div>
                 <div className='icon-links'>

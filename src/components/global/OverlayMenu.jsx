@@ -21,7 +21,7 @@ const OverlayMenu = ({ defOverlay, hideMenu }) => {
         {
             id: "doors",
             name: 'Doors',
-            link: '/pages/doors',
+            link: '/pages/Kaski-Doors',
             class: 'menu-item'
         },
         {

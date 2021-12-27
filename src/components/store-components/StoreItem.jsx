@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import StoreBuyBtn from './StoreBuyBtn'
 import StoreAddBtn from './StoreAddBtn';
 import "./css/StoreItem.css"
@@ -44,8 +44,9 @@ const StoreItem = (props) => {
         setAddState(defaultState)
     }
 
+
     return (
-        <div style={{ background: props.background }} className={"store-item all" + props.category}>
+        <div style={{ background: props.background }} className={"store-item all " + props.category}>
             <div className="store-item-top">
                 <StoreBuyBtn
                     onHover={onBuyHover}
