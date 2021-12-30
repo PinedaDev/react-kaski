@@ -5,6 +5,8 @@ import { useState } from "react/cjs/react.development";
 import MainPage from './pages/MainPage';
 import Store from './pages/store/Store';
 import Windows from './pages/windows/Windows';
+//window openable windows page
+import CategorySection from './components/windows-components/CategorySection';
 import Doors from './pages/doors/Doors';
 //import Demopage from './components/pages/Demopage'
 //Routing 
@@ -47,10 +49,38 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<MainPage defOverlay={overlayState} showMenu={showOverlayMenu} hideMenu={hideOverlayMenu} />} />
-        <Route path="/pages/Kaski-Online-Store" element={<Store defOverlay={overlayState} showMenu={showOverlayMenu} hideMenu={hideOverlayMenu} />} />
-        <Route path="/pages/Kaski-Windows" element={<Windows defOverlay={overlayState} showMenu={showOverlayMenu} hideMenu={hideOverlayMenu} />} />
-        <Route path="/pages/Kaski-Doors" element={<Doors defOverlay={overlayState} showMenu={showOverlayMenu} hideMenu={hideOverlayMenu} />} />
+        <Route
+          path="/"
+          element={<MainPage
+            defOverlay={overlayState}
+            showMenu={showOverlayMenu}
+            hideMenu={hideOverlayMenu} />} />
+
+        <Route
+          path="/online-store"
+          element={<Store defOverlay={overlayState}
+            showMenu={showOverlayMenu}
+            hideMenu={hideOverlayMenu} />} />
+
+        <Route
+          path="/windows"
+          element={<Windows defOverlay={overlayState}
+            showMenu={showOverlayMenu}
+            hideMenu={hideOverlayMenu} />} />
+
+        <Route
+          path="/windows/avattavat-ikkunat"
+          element={<CategorySection defOverlay={overlayState}
+            showMenu={showOverlayMenu}
+            hideMenu={hideOverlayMenu} />} />
+
+        <Route
+          path="/doors"
+          element={<Doors
+            defOverlay={overlayState}
+            showMenu={showOverlayMenu}
+            hideMenu={hideOverlayMenu} />} />
+
       </Routes>
     </Router>
   )

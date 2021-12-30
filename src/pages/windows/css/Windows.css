@@ -37,8 +37,8 @@ body {
     place-items: center;
     text-align: center;
     color: #ffffffb7;
-    height: 300px;
-    width: 300px;
+    height: 200px;
+    width: 200px;
     margin: auto;
     margin-bottom: 4rem;
     border-radius: 30%;
@@ -58,4 +58,9 @@ body {
     font-weight: bold;
     border-bottom: 1px solid transparent;
     text-shadow: 10px 5px 10px rgba(31, 27, 27, 0.568); 
+}
+
+.category-name a {
+    text-decoration: none;
+    color: #fff;
 }

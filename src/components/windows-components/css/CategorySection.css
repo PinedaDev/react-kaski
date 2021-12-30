@@ -1,0 +1,99 @@
+.category-section {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgb(218, 54, 54),rgb(71, 5, 5));
+    z-index: 10;
+    font-family: "Montserrat";
+}
+
+.fix-content {
+    margin: 0;
+    width: 100%;
+    color: #fff;
+}
+.category-section-first-text {
+    margin: 0;
+    padding-top: 5rem;
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: bold;
+}
+.category-section-second-text{
+    text-align: center;
+}
+
+.carts-container {
+    display: grid;
+    place-items: center;
+    grid-template-rows: 1fr;
+    gap: 3rem;
+    padding: 1rem;
+}
+
+@media only screen and (min-width: 700px) {
+    .carts-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        place-items:initial;
+    }
+    .category-section-first-text {
+        margin: 0 3rem;
+        padding-top: 5rem;
+        font-size: 1.5em;
+        text-align: center;
+        font-weight: bold;
+    }
+    .category-section-second-text{
+        padding: 0 3rem;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .fix-content {
+        height: 100vh;
+        background: linear-gradient(to bottom,#F81010,#7c08080e,#7c08080e),url(../img/categories-bg/cat-bg-1.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    .category-section-first-text{
+
+    }
+    .carts-container{
+        position: absolute;
+        top: 90%;
+    }
+    .category-section-first-text {
+        display: block;
+        width: 20rem;
+        margin: 0 4rem;
+        padding-top: 7rem;
+        font-size: 1.5em;
+        text-align: left;
+        font-weight: bold;
+    }
+    .category-section-second-text{
+        margin-left: 2rem;
+        padding: 1rem;
+        display: block;
+        width: 25rem;
+        background-color: rgba(0, 0, 0, .5);
+        text-align: center;
+        border-radius: 20px;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    div .window-cart {
+        width: 25rem;
+    }
+    div .sub-uValue-text {
+        font-size: .9em;
+    }
+    .carts-container{
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

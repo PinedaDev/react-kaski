@@ -15,25 +15,25 @@ const OverlayMenu = ({ defOverlay, hideMenu }) => {
         {
             id: "windows",
             name: 'Windows',
-            link: '/pages/Kaski-Windows',
+            link: '/windows',
             class: 'menu-item'
         },
         {
             id: "doors",
             name: 'Doors',
-            link: '/pages/Kaski-Doors',
+            link: '/doors',
             class: 'menu-item'
         },
         {
             id: "shop",
             name: 'Shop',
-            link: '/pages/Kaski-Online-Store',
+            link: '/online-store',
             class: 'menu-item'
         },
         {
             id: "contact",
             name: 'Contact',
-            link: '/Contact',
+            link: '/contact',
             class: 'menu-item'
         }
     ]

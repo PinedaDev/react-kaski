@@ -1,6 +1,6 @@
 .nav-bar {
     position: fixed;
-    z-index: 6;
+    z-index: 999;
     width: 100%;
     display: flex;
     align-items: center;
@@ -9,6 +9,7 @@
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.383);
     border-bottom-left-radius: 17px;
     border-bottom-right-radius: 17px;
+    backdrop-filter: blur(10px);
 }
 
 .text-links {
