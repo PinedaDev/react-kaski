@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from 'react'
-import NavBar from '../../components/global/NavBar'
-import OverlayMenu from '../../components/global/OverlayMenu'
-import StoreItem from '../../components/store-components/StoreItem'
-import Filter from '../../components/store-components/Filter'
-import Cart from '../../components/store-components/Cart'
-import './css/Store.css'
+import React, { useState, useEffect } from 'react';
+import NavBar from '../../components/global/NavBar';
+import OverlayMenu from '../../components/global/OverlayMenu';
+import StoreItem from '../../components/store-components/StoreItem';
+import Filter from '../../components/store-components/filter/Filter';
 
-const Store = ({ defOverlay, showMenu, hideMenu }) => {
+import './css/Store.css'
+import { get } from 'jquery';
+
+const Store = ({ defOverlay, addItems, storeItems, itemsInCart, showMenu, hideMenu }) => {
 
     //Filter 
     const categories = ["All", "windows", "doors", "parts"]
@@ -16,77 +17,73 @@ const Store = ({ defOverlay, showMenu, hideMenu }) => {
             categories.map((category) => {
                 return (
                     <div key={category} onClick={() => changeCategory(category)} className={"filter-option " + category}><p>{category}</p></div>
-                )
+                );
             })
-        )
-    }
+        );
+    };
     // set "ALl" as a default category
     const [currentCategory, setCategory] = useState(() => categories[0])
 
     const changeCategory = (cat) => {
         setCategory(cat)
-    }
+    };
     // filter items and store them in a list
-
-    const items = [
-        {
-            id: "1",
-            name: "The Window",
-            price: 10,
-            category: "windows"
-        },
-        {
-            id: "2",
-            name: "The Door",
-            price: 15,
-            category: "doors"
-        },
-        {
-            id: "3",
-            name: "The Part",
-            price: 5,
-            category: "parts"
-        },
-        {
-            id: "4",
-            name: "another Part",
-            price: 5,
-            category: "parts"
-        },
-    ]
-    const filteredItems = items.filter((item) => {
+    const filteredItems = storeItems.filter((item) => {
         if (item.category === currentCategory) {
             return true
         }
-    })
+    });
+
+    const [storeState, setStoreState] = useState(false)
+
+    const updateState = () => {
+        if (!storeState) {
+            setStoreState(true)
+        } else {
+            setStoreState(!storeState)
+        }
+    }
+
+    console.log(itemsInCart)
+
     //show all the items when the current category is All if it's not use the filtered item list to render de itmes
     const showItems = () => {
 
         if (currentCategory == "All") {
             return (
-                items.map((item) => {
+                storeItems.map((item) => {
                     return (
-                        <StoreItem key={item.id} price={item.price} storeItemName={item.name} category={item.category} />
-                    )
+                        <StoreItem
+                            addItems={addItems}
+                            updateState={updateState}
+                            id={item.id}
+                            key={item.id}
+                            price={item.price}
+                            storeItemName={item.name}
+                            category={item.category} />
+                    );
                 })
-            )
+            );
         } else {
             return (
                 filteredItems.map((item) => {
                     return (
-                        <StoreItem key={item.id} price={item.price} storeItemName={item.name} category={item.category} />
+                        <StoreItem
+                            id={item.id}
+                            key={item.id}
+                            price={item.price}
+                            storeItemName={item.name}
+                            category={item.category} />
                     );
                 })
-            )
+            );
         }
     }
-    //
-    const itemsToCart = []
+
     return (
         <div className='store-page'>
-            <NavBar showMenu={showMenu} />
+            <NavBar showMenu={showMenu} count={itemsInCart.length} />
             <OverlayMenu defOverlay={defOverlay} hideMenu={hideMenu} />
-            <Cart itemsInCart={items} />
             <Filter activeCategory={currentCategory} filterOptions={filterOptions} />
             <div className='store-items-container'>
                 {showItems()}

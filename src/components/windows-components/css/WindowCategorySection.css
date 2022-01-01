@@ -2,7 +2,7 @@
     position: relative;
     height: 100%;
     width: 100%;
-    background: linear-gradient(rgb(218, 54, 54),rgb(71, 5, 5));
+    background: linear-gradient( to right, rgb(226, 0,0), rgb(107, 23, 23));
     z-index: 10;
     font-family: "Montserrat";
 }
@@ -55,9 +55,6 @@
         background: linear-gradient(to bottom,#F81010,#7c08080e,#7c08080e),url(../img/categories-bg/cat-bg-1.jpg);
         background-position: center;
         background-size: cover;
-    }
-    .category-section-first-text{
-
     }
     .carts-container{
         position: absolute;

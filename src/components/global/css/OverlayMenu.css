@@ -12,6 +12,8 @@
     background-color: rgba(17, 17, 17, 0.739); /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
     transition: 200ms ; /* 0.5 second transition effect to slide in the sidenav */ 
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
 }
 
 .overlay-content {

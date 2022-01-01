@@ -15,6 +15,7 @@ import Img3 from "./img/categories-container/door-cat-3.jpg"
 import Img4 from "./img/categories-container/door-cat-4.jpg"
 import Img5 from "./img/categories-container/door-cat-5.jpg"
 import Img6 from "./img/categories-container/door-cat-6.jpg"
+import { NavLink } from 'react-router-dom'
 //category bg img
 
 const Doors = ({ defOverlay, showMenu, hideMenu }) => {
@@ -69,14 +70,16 @@ const Doors = ({ defOverlay, showMenu, hideMenu }) => {
                 <div className='categories-container'>
                     {categories.map((category, i) => {
                         return (
-                            <div style={{
-                                background: `linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(${category.img})`,
-                                backgroundPosition: "center",
-                                backgroundSize: "cover",
-                            }}
-                                key={i} className='category-container'>
-                                <p className='category-name'>{category.name}</p>
-                            </div>
+                            <NavLink to="/doors/door-section">
+                                <div style={{
+                                    background: `linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(${category.img})`,
+                                    backgroundPosition: "center",
+                                    backgroundSize: "cover",
+                                }}
+                                    key={i} className='category-container'>
+                                    <p className='category-name'>{category.name}</p>
+                                </div>
+                            </NavLink>
                         )
                     })}
                 </div>

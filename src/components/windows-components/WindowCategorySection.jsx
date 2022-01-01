@@ -1,5 +1,5 @@
 import React from 'react'
-import "./css/CategorySection.css"
+import "./css/WindowCategorySection.css"
 import WindowCart from './WindowCart'
 //
 import NavBar from '../global/NavBar'
@@ -9,7 +9,7 @@ import windImg1 from "./img/windows/Kaski_MSEA_ikkuna-kopio-scaled.jpg"
 import windImg2 from "./img/windows/MSEA_Thermo_musta.png"
 import windImg3 from "./img/windows/Kaski_MSEA_Thermo_PLUS-scaled.jpg"
 
-const CategorySection = ({ defOverlay, showMenu, hideMenu }) => {
+const WindowCategorySection = ({ defOverlay, showMenu, hideMenu }) => {
     const windows = [
         {
             img: windImg1,
@@ -82,4 +82,4 @@ const CategorySection = ({ defOverlay, showMenu, hideMenu }) => {
     )
 }
 
-export default CategorySection
+export default WindowCategorySection

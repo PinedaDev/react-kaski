@@ -9,8 +9,13 @@
     border-radius: 20px;
     transition: all .3s;
     box-shadow: 8px 8px 10px rgba(20, 23, 37, 0.6);
+    font-family: "Montserrat", sans-serif;
 }
 
+.store-item:hover {
+    margin-top: 2em;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
 
 /* item top section  */
 /* inside btn  */

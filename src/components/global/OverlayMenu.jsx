@@ -29,12 +29,6 @@ const OverlayMenu = ({ defOverlay, hideMenu }) => {
             name: 'Shop',
             link: '/online-store',
             class: 'menu-item'
-        },
-        {
-            id: "contact",
-            name: 'Contact',
-            link: '/contact',
-            class: 'menu-item'
         }
     ]
 

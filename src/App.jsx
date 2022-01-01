@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
-import { useState } from "react/cjs/react.development";
 //pages
 import MainPage from './pages/MainPage';
 import Store from './pages/store/Store';
+//windows components
 import Windows from './pages/windows/Windows';
-//window openable windows page
-import CategorySection from './components/windows-components/CategorySection';
+import WindowCategorySection from './components/windows-components/WindowCategorySection';
+//---------------
+//doors components
 import Doors from './pages/doors/Doors';
-//import Demopage from './components/pages/Demopage'
+import DoorSection from './components/doors-components/door-category-section/DoorSection';
 //Routing 
 import {
   BrowserRouter as Router,
@@ -28,23 +29,94 @@ function App() {
     opacity: "0",
     visibility: "hidden"
   };
-  //statement passed when click a menu btn
+
   const overlayVisible = {
     opacity: "1",
     visibility: "visible"
   };
-  // hook to return the default overlay statement
-  const [overlayState, setOverlaystateState] = useState(() => overlayHidden)
 
-  // hide menu with the cross inside the overlay
+  const [overlayState, setOverlayStateState] = useState(() => overlayHidden)
+
+
   function hideOverlayMenu() {
-    setOverlaystateState(overlayHidden)
-  }
-  // show the menu when click on an menu btn
-  function showOverlayMenu() {
-    setOverlaystateState(overlayVisible)
+    setOverlayStateState(overlayHidden)
   }
 
+  function showOverlayMenu() {
+    setOverlayStateState(overlayVisible)
+  }
+
+  const storeItems = [
+    {
+      id: "1",
+      name: "The Window",
+      price: 10,
+      category: "windows",
+      amount: 1,
+      onCart: false
+    },
+    {
+      id: "2",
+      name: "The Door",
+      price: 15,
+      category: "doors",
+      amount: 1,
+      onCart: false
+    },
+    {
+      id: "3",
+      name: "The Part",
+      price: 5,
+      category: "parts",
+      amount: 1,
+      onCart: false
+    },
+    {
+      id: "4",
+      name: "another Part",
+      price: 5,
+      category: "parts",
+      amount: 1,
+      onCart: false
+    },
+  ]
+
+  //Basket
+
+  const itemsInCart = [];
+
+
+  const addItems = (elementId) => {
+    return new Promise((resolve, reject) => {
+
+      let itemIndex;
+
+      let targetItem = storeItems.filter((item, i) => {
+        if (item.id === elementId) {
+          return true
+        }
+      })
+
+
+      if (itemsInCart.includes(targetItem[0])) {
+        const index = itemsInCart.indexOf(targetItem[0])
+        if (index > -1) {
+          itemsInCart.splice(index, 1)
+        }
+      } else {
+        targetItem[0].onCart = true
+        itemsInCart.push(targetItem[0])
+      }
+
+      const error = false
+
+      if (!error) {
+        resolve()
+      } else {
+        reject("Error: Something went wrong")
+      }
+    });
+  }
 
   return (
     <Router>
@@ -60,6 +132,9 @@ function App() {
           path="/online-store"
           element={<Store defOverlay={overlayState}
             showMenu={showOverlayMenu}
+            itemsInCart={itemsInCart}
+            storeItems={storeItems}
+            addItems={addItems}
             hideMenu={hideOverlayMenu} />} />
 
         <Route
@@ -70,7 +145,7 @@ function App() {
 
         <Route
           path="/windows/avattavat-ikkunat"
-          element={<CategorySection defOverlay={overlayState}
+          element={<WindowCategorySection defOverlay={overlayState}
             showMenu={showOverlayMenu}
             hideMenu={hideOverlayMenu} />} />
 
@@ -81,6 +156,12 @@ function App() {
             showMenu={showOverlayMenu}
             hideMenu={hideOverlayMenu} />} />
 
+        <Route
+          path="/doors/door-section"
+          element={<DoorSection
+            defOverlay={overlayState}
+            showMenu={showOverlayMenu}
+            hideMenu={hideOverlayMenu} />} />
       </Routes>
     </Router>
   )

@@ -7,7 +7,16 @@ import './css/NavBar.css'
 
 
 
-const NavBar = ({ showMenu }) => {
+const NavBar = (props) => {
+
+    const BasketCounter = () => {
+        return (
+            <div className='basket-counter'>
+                <span>{props.count}</span>
+            </div>
+        )
+    }
+
     return (
         <div className='nav-bar'>
             <KaskiLogo />
@@ -20,13 +29,19 @@ const NavBar = ({ showMenu }) => {
                 </div>
                 <div className='icon-links'>
                     <i><NavLink to="/online-store"><img className='cart-icon' src={cartIcon} alt="cart icon" /></NavLink></i>
-                    <i className="fas fa-shopping-basket basket-icon"><div className='basket-counter'></div></i>
+                    <i className="fas fa-shopping-basket basket-icon">
+                        {props.count == 0 ? "" : BasketCounter()}
+                    </i>
                     <i><img className='search-icon' src={searchIcon} alt="search icon" /></i>
-                    <i onClick={showMenu} className="fas fa-ellipsis-v fa-2x menu-icon"></i>
+                    <i onClick={props.showMenu} className="fas fa-ellipsis-v fa-2x menu-icon"></i>
                 </div>
             </div>
         </div>
     )
+}
+
+NavBar.defaultProps = {
+    count: 0
 }
 
 export default NavBar
