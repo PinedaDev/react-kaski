@@ -1,0 +1,59 @@
+.filter {
+    cursor: pointer;
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    z-index: 5;
+}
+
+.active-category {
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 2rem;
+    width: 9rem;
+    background: rgba(206, 197, 197, 0.671);
+    color: rgba(0, 0, 0, 0.596);
+    font-size: 1.5em;
+    font-family: "Montserrat";
+    font-weight: bold;
+    border-radius: 20px;
+    transition: .5s ease-in-out;
+    z-index: 3;
+}
+
+.active-category:hover {
+    background: rgba(255, 255, 255, 0.7);
+    color: rgb(0, 0, 0);
+}
+
+.filter-dropdown {
+    display: grid;
+    position: absolute;
+    justify-content: center;
+    align-content: center;
+    font-size: 1em;
+    font-family: "Montserrat";
+    font-weight: bold;
+    transition: .3s;
+    margin-top: .5rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, .3);
+    color: rgba(0, 0, 0, 0.596);
+    z-index: 2;
+    width: 9rem;
+}
+
+.filter-option p {
+
+    margin: .2rem;
+    text-align: center;
+    padding-bottom: 0;
+    border-bottom: 1px solid transparent;
+    transition: .3s ease-in-out;
+}
+.filter-option p:hover {
+    color: #000;
+    border-bottom: 1px solid black;
+}

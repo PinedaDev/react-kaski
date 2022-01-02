@@ -1,7 +1,0 @@
-.square {
-    height: 200px;
-    width: 200px;
-    transform: translateY(500%);
-    margin: auto;
-    transition: .5s;
-}

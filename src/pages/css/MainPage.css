@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Fredericka+the+Great&family=Montserrat:wght@300;800&display=swap');
+/*
+font-family: 'Caveat', cursive;
+font-family: 'Fredericka the Great', cursive;
+font-family: 'Montserrat', sans-serif;
+*/
+
+.main-page {
+    position: relative;
+    margin: 0;
+    background: rgb(165, 105, 83);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+} 

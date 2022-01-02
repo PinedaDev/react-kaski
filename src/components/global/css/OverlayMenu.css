@@ -1,0 +1,56 @@
+/* overlay menu  */
+
+
+.overlay {
+    height: 100%; /* 100% Full-height */
+    width: 100%;
+    position: fixed; /* Stay in place */
+    z-index: 1000;
+    z-index: 1000; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: rgba(17, 17, 17, 0.739); /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 200ms ; /* 0.5 second transition effect to slide in the sidenav */ 
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+}
+
+.overlay-content {
+    text-align: right;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(214, 18, 18, 0.897);
+}
+
+
+.menu-item {
+    text-align: center;
+    padding: 20px 8px 8px 25px;
+    padding: 20px 8px 8px 8px;
+    text-decoration: none;
+    font-size: 30px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;  
+}
+.menu-item:hover {
+    border-left: 6px solid #ffffff;
+	background: rgba(150, 14, 14, 0.897);
+}
+
+div.overlay .active {
+    background: rgba(150, 14, 14, 0.897);
+}
+
+.close-btn {
+    color: #fff;
+    top: 0;
+    font-size: 4em;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: .5s;
+}
+.close-btn:hover {
+  color: #000;
+}

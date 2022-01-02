@@ -1,0 +1,63 @@
+.window-cart {
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(rgb(228, 78, 78), rgb(221, 107, 41));
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 6px 6px 6px rgba(7, 7, 7, 0.342);
+    font-size: 1.3em;
+    font-weight:lighter;
+}
+.window-img-container {
+    margin-top: 2rem;
+    height: 15rem;
+    width: 100%;
+}
+.window-cart-img{
+    height: 100%;
+    width: 100%;
+} 
+.window-details{
+    padding: 1rem;
+}
+.window-name {
+    margin: .5rem 0;
+    text-align: center;
+    text-shadow: 5px 5px 6px rgba(0,0,0,.16);
+}
+.u-value {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+.decorator-element {
+    display: inline-block;
+    width: 0; 
+    height: 0; 
+    border-top: 2rem solid #fff; 
+    border-right: 2rem solid transparent;   
+    transform: rotate(135deg);  
+}
+.u-value-text {
+    font-size: 1em;
+    margin-left: 1rem;
+    display: inline-block;
+    text-align: center;
+}
+.window-category {
+    font-size: 1.3em;
+}
+.sub-uValue-text {
+    font-size: .7em;
+}
+
+.window-description {
+    text-align: center;
+    font-size: .8em;
+}
+.window-features li{
+    font-size: .8em;
+}
+li::marker {
+    font-size: 2em;
+}

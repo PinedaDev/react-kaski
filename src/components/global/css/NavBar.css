@@ -1,0 +1,75 @@
+.nav-bar {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.383);
+    border-bottom-left-radius: 17px;
+    border-bottom-right-radius: 17px;
+    backdrop-filter: blur(10px);
+}
+
+.nav-bar a{
+    text-decoration: none;
+}
+
+.text-links {
+    display: none;
+}
+
+.icon-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon-links i{
+    margin: 0 .5rem;
+}
+.menu-icon {
+    cursor: pointer;
+    margin-left: 10px;
+    transition: .3s;
+}
+.menu-icon:hover {
+    color: rgb(255, 2, 2);
+}
+.search-icon{
+    color: #000;
+    font-size: 1.5em;
+    border-bottom: 2px transparent;
+    transition:all .5s ease-in-out;
+}
+.search-icon:hover{
+    color: rgb(255, 0, 0);
+}
+.store-icon {
+    color: #000;
+    font-size: 1.5em;
+    border-bottom: 2px transparent;
+    transition:all .5s ease-in-out;
+}
+.store-icon:hover{
+    color: rgb(245, 0, 0);
+}
+.cart-icon {
+    display: none;
+    position: relative;
+}
+.basket-counter {
+    position:absolute;
+    display: grid;
+    place-items: center;
+    height: 15px;
+    width: 15px;
+    color: white;
+    font-size: 15px;
+    background-color: red;
+    border-radius: 50%;
+    top: 0;
+}
+.text-links > .active {
+    font-weight: bold;
+}

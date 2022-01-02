@@ -1,0 +1,22 @@
+/* wave divition 2  */
+.footer-wave-divition {
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.footer-wave-divition svg {
+    position: relative;
+    display: block;
+    width: calc(117% + 1.3px);
+    height: 130px;
+    /* transform: rotateY(180deg); */
+}
+
+.footer-wave-divition {
+    fill: #af1e1e;
+}

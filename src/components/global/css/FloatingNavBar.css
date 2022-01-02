@@ -1,0 +1,30 @@
+.floating-nav-bar {
+    display: none;
+    position: fixed;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.3);
+    z-index: 2;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    border-radius: 35px;
+    backdrop-filter: blur(2px);
+    transition: .5s;
+}
+
+.floating-nav-link {
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    background: transparent;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: all .3s ease-in-out;
+}
+.floating-nav-link:hover {
+    padding-bottom: 5px;
+    border-bottom: 2px solid #000;
+}

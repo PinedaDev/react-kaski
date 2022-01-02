@@ -1,0 +1,25 @@
+
+.door-cart {
+    background-color: rgba(0,0,0,.2);
+    border-radius: 67;
+    padding: 1rem;
+    width: 80%;
+    transition: .4s;
+}
+.door-cart:hover {
+    box-shadow: 0px 0px 20px #fff;
+    transform: translateY(-5%);
+}
+.door-img-container {
+    height: 20rem;   
+}
+.door-name {
+    margin: 0;
+    padding: 0rem 0;
+}
+.door-item-decorator {
+    height: 5px;
+    width: 80%;
+    background-color: white;
+    margin: auto;
+}
