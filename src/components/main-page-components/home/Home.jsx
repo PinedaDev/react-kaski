@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react'
+import React from 'react'
 import { NavLink } from 'react-router-dom'
 import './css/Home.css'
 import girlPhoto from '../../../img/backgrounds/girl-and-bunny-img.png'

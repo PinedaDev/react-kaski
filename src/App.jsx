@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
 //pages
 import MainPage from './pages/MainPage';
 import Store from './pages/store/Store';
+import Cart from './components/store-components/cart/Cart';
 //windows components
 import Windows from './pages/windows/Windows';
 import WindowCategorySection from './components/windows-components/WindowCategorySection';
@@ -20,38 +21,11 @@ import { useEffect } from 'react/cjs/react.development';
 
 
 function App() {
-  // Overlay Menu (global component)
-  /*The overlay menu requires to
-  pass it's statemens and functions as properties
-  to where it is going to be use*/
-
-  //default global statement for the overlay menu
-  const overlayHidden = {
-    opacity: "0",
-    visibility: "hidden"
-  };
-
-  const overlayVisible = {
-    opacity: "1",
-    visibility: "visible"
-  };
-
-  const [overlayState, setOverlayStateState] = useState(() => overlayHidden)
-
-
-  function hideOverlayMenu() {
-    setOverlayStateState(overlayHidden)
-  }
-
-  function showOverlayMenu() {
-    setOverlayStateState(overlayVisible)
-  }
-
   const serverItems = [
     {
       id: 1,
       name: "The Window",
-      price: 10,
+      price: 56.20,
       category: [{
         id: 1,
         name: "windows",
@@ -63,7 +37,7 @@ function App() {
     {
       id: 2,
       name: "The Door",
-      price: 10,
+      price: 20,
       category: [{
         id: 2,
         name: "doors",
@@ -92,7 +66,7 @@ function App() {
     {
       id: 3,
       name: "The Part",
-      price: 10,
+      price: 35,
       category: [{
         id: 3,
         name: "parts",
@@ -124,11 +98,7 @@ function App() {
   const addItems = (elementId) => {
     return new Promise((resolve, reject) => {
 
-      let targetItem = serverItems.filter((item, i) => {
-        if (item.id === elementId) {
-          return true
-        }
-      })
+      let targetItem = serverItems.filter((item) => item.id === elementId ? true : "")
 
 
       if (itemsInCart.includes(targetItem[0])) {
@@ -136,6 +106,8 @@ function App() {
         if (index > -1) {
           itemsInCart.splice(index, 1)
         }
+        targetItem[0].onCart = false
+        targetItem[0].amount = 1
       } else {
         targetItem[0].onCart = true
         itemsInCart.push(targetItem[0])
@@ -158,45 +130,35 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={<MainPage
-            defOverlay={overlayState}
-            showMenu={showOverlayMenu}
-            hideMenu={hideOverlayMenu} />} />
+          element={<MainPage />} />
 
         <Route
           path="/online-store"
-          element={<Store defOverlay={overlayState}
-            showMenu={showOverlayMenu}
+          element={<Store
             itemsInCart={itemsInCart}
             storeItems={storeItems}
-            addItems={addItems}
-            hideMenu={hideOverlayMenu} />} />
+            addItems={addItems} />} />
+
+        <Route
+          path="/online-store/cart"
+          element={<Cart
+            itemsInCart={itemsInCart} />} />
 
         <Route
           path="/windows"
-          element={<Windows defOverlay={overlayState}
-            showMenu={showOverlayMenu}
-            hideMenu={hideOverlayMenu} />} />
+          element={<Windows />} />
 
         <Route
           path="/windows/avattavat-ikkunat"
-          element={<WindowCategorySection defOverlay={overlayState}
-            showMenu={showOverlayMenu}
-            hideMenu={hideOverlayMenu} />} />
+          element={<WindowCategorySection />} />
 
         <Route
           path="/doors"
-          element={<Doors
-            defOverlay={overlayState}
-            showMenu={showOverlayMenu}
-            hideMenu={hideOverlayMenu} />} />
+          element={<Doors />} />
 
         <Route
           path="/doors/door-section"
-          element={<DoorSection
-            defOverlay={overlayState}
-            showMenu={showOverlayMenu}
-            hideMenu={hideOverlayMenu} />} />
+          element={<DoorSection />} />
       </Routes>
     </Router>
   )

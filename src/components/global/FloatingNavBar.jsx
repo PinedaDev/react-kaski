@@ -1,7 +1,5 @@
 import './css/FloatingNavBar.css'
 import React from 'react'
-import cartIcon from '../../img/icons/cart-icon.png'
-import searchIcon from '../../img/icons/search-icon.png'
 import KaskiLogo from './KaskiLogo'
 import { NavLink } from 'react-router-dom'
 
@@ -13,8 +11,8 @@ const FloatingNavBar = ({ showMenu, state }) => {
             <NavLink className="floating-nav-link" to="/windows" >Windows</NavLink>
             <NavLink className="floating-nav-link" to="/doors" >Doors</NavLink>
             <NavLink className="floating-nav-link" to="" >Company</NavLink>
-            <i><NavLink to="/online-store"><img className='cart-icon' src={cartIcon} alt="cart icon" /></NavLink></i>
-            <i><img className='search-icon' src={searchIcon} alt="search icon" /></i>
+            <NavLink to="/online-store"><i className="fas fa-store store-icon"></i></NavLink>
+            <NavLink to="/"><i className="fas fa-search search-icon"></i></NavLink>
             <i onClick={showMenu} className="fas fa-ellipsis-v fa-2x menu-icon"></i>
         </div>
     )

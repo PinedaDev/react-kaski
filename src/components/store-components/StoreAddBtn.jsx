@@ -1,9 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const StoreAddBtn = ({ state, onCart, onHover, mouseOut, addItems, id, updateState }) => {
-
-    const [clickedState, setBtnState] = useState(false)
-
     return (
         <div
             id={id}
@@ -13,11 +10,11 @@ const StoreAddBtn = ({ state, onCart, onHover, mouseOut, addItems, id, updateSta
             onClick={() => addItems(id).then(updateState)}
             className="store-item-btn add-to-btn">
             <i
-                style={{ opacity: state.iconOpacity, color: (!clickedState ? state.iconColor : "rgb(0, 255, 0)") }}
+                style={{ opacity: state.iconOpacity, color: (!onCart ? 'rgb(0,0,0)' : 'rgb(0,255,0)') }}
                 className="fas fa-cart-plus fa-2x"></i>
             <p
                 style={{ opacity: state.textOpacity }}
-                className="hidden-text">Add+</p>
+                className="hidden-text">{!onCart ? 'Add+' : 'Remove'} </p>
         </div>
     )
 }

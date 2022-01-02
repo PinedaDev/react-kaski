@@ -4,10 +4,7 @@ import { NavLink } from 'react-router-dom'
 import "./css/Windows.css"
 import "./css/Windows-PC.css"
 //global components
-import NavBar from '../../components/global/NavBar'
-import ChatBot from '../../components/global/ChatBot'
-import OffertForm from '../../components/global/OffertForm'
-import OverlayMenu from '../../components/global/OverlayMenu'
+import Navegation from '../../components/navegation/Navegation'
 //imgs
 //category container backgrounds
 import Img1 from "./img/categories/wind-cat-1.jpeg"
@@ -18,7 +15,7 @@ import Img5 from "./img/categories/wind-cat-5.jpg"
 import Img6 from "./img/categories/wind-cat-6.jpg"
 
 
-const Windows = ({ defOverlay, showMenu, hideMenu }) => {
+const Windows = () => {
 
     const categories = [
         {
@@ -54,10 +51,7 @@ const Windows = ({ defOverlay, showMenu, hideMenu }) => {
     ]
     return (
         <div className='windows-page'>
-            <NavBar showMenu={showMenu} />
-            <OverlayMenu defOverlay={defOverlay} hideMenu={hideMenu} />
-            <ChatBot />
-            <OffertForm />
+            <Navegation />
             <div className='windows-bg-container'></div>
             <div className='windows-page-content'>
                 <h1 className='page-header'>Ikkunat kortimausella laadulla</h1>

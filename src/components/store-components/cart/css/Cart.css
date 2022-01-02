@@ -1,18 +1,104 @@
-.cart-overlay {
-    display: none;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0,0,0,.5);
-    z-index: 999;
-}
-.cart-overlay-content {
+.cart-section {
+    margin: 0;
     position: relative;
-    background: linear-gradient(to bottom right,#E27D7D,#B50000);
-    float: right;
-    width: 25%;
+    display: flexbox;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
     height: 100%;
 }
-.cart-overlay-content > p {
-    text-align: center;
+
+.cart-items-section {
+    background: linear-gradient(#FF1C1C, #B94A4A);
+    min-height: 100vh;
+}
+
+.checkout-section {
+    background: #fff;
+    color: #000;
+    min-height: 100vh;
+}
+
+.divition-line {
+    height: .8rem;
+    width: 90%;
+    background: linear-gradient(to left,#FF1C1C, #B94A4A);
+    border-radius: 20px;
+    margin: auto;
+    transform: translateY(1rem);
+}
+
+.cart-main-header {
+    margin: 0;
+    padding-top: 2rem;
+}
+
+.checkout-btn,
+.back-to-store {
+    display: block;
+    padding: .5rem;
+    margin: auto;
+    color: #fff;
+    background: linear-gradient(#F94444, #B94A4A);
+    border-radius: 30px;
+    border: none;
+    font-weight: bold;
+    transition: .3s ease-in-out;
+}
+.cart-item-container {
+    padding-top: 2em;
+    width: 100%; 
+}
+.checkout-btn:hover,
+.back-to-store:hover {
+    color: rgb(36, 32, 32);
+    transform: translateY(-5%);
+}
+
+.checkout-btn {
+    margin-top: 3rem;
+    font-size: 2.5em;    
+}
+
+.back-to-store {
+    margin-top: 5rem;
+    font-size: 1.8em;
+}
+.cart-section a {
+    text-decoration: none;
+}
+
+.basket-icon {
+    display: block;
+    margin: 3rem 0;
+    color: #4B4545;
+}
+
+/* change navegation bar  */
+
+div.cart-items-section .nav-bar .menu-icon{
+    color: white;
+}
+div.cart-items-section .nav-bar{
+    position: relative;
+}
+
+@media only screen and (min-width: 1024px) {
+    .cart-section {
+        display: flex;
+    }
+    .cart-items-section {
+        width: 60%;
+    }
+    .checkout-section {
+        width: 40%;
+    }
+    div.cart-items-section .nav-bar {
+        width: 90%;
+        margin: auto;
+        margin-top: 1rem;
+        border-radius: 20px;
+    }
+    div.cart-items-section .nav-bar .text-links{
+        display: none;
+    }
 }

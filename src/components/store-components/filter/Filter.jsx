@@ -17,20 +17,6 @@ const Filter = (props) => {
     ]
     const [isVisible, setFilterState] = useState(false)
 
-    // Set an store  page state to update it when
-    // user click on add+/remove item from the cart
-    const [filterState, setStoreState] = useState(false)
-
-    /*
-    const updateState = () => {
-        if (!filterState) {
-            setStoreState(true)
-        } else {
-            setStoreState(!filterState)
-        }
-    } */
-
-
     return (
         <div className='filter'>
             <div onClick={() => setFilterState(!isVisible)} className='active-category'>

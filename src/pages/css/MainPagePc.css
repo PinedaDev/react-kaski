@@ -7,7 +7,7 @@
         width: 20%;
     }
     /* navegation bar */
-    div .nav-bar {
+    div.main-section .nav-bar {
         position: absolute;
     }
     div.links {
@@ -32,7 +32,7 @@
         color: #000;
         font-family: 'Montserrat', sans-serif;
         font-weight: 400;
-        font-size: 1.2em;
+        font-size: 1em;
         background: transparent;
         text-decoration: none;
         padding: 0 1rem;
@@ -40,8 +40,7 @@
         transition: all .3s ease-in-out;
     }
     .nav-link:hover {
-        padding-bottom: 5px;
-        border-bottom: 2px solid #000;
+        color: rgb(255, 0, 0);
     }
 
     i.menu-icon {

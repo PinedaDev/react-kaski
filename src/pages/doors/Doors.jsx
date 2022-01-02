@@ -3,10 +3,8 @@ import React from 'react'
 import "./css/Doors.css"
 import "./css/Doors-PC.css"
 //global components
-import NavBar from '../../components/global/NavBar'
-import ChatBot from '../../components/global/ChatBot'
-import OffertForm from '../../components/global/OffertForm'
-import OverlayMenu from '../../components/global/OverlayMenu'
+import Navegation from '../../components/navegation/Navegation'
+
 //imgs
 //category container backgrounds
 import Img1 from "./img/categories-container/door-cat-1.jpg"
@@ -18,7 +16,7 @@ import Img6 from "./img/categories-container/door-cat-6.jpg"
 import { NavLink } from 'react-router-dom'
 //category bg img
 
-const Doors = ({ defOverlay, showMenu, hideMenu }) => {
+const Doors = () => {
     const categories = [
         {
             name: "Ulko-ovet",
@@ -47,10 +45,7 @@ const Doors = ({ defOverlay, showMenu, hideMenu }) => {
     ]
     return (
         <div className='doors-page'>
-            <NavBar showMenu={showMenu} />
-            <OverlayMenu defOverlay={defOverlay} hideMenu={hideMenu} />
-            <ChatBot />
-            <OffertForm />
+            <Navegation />
             <div className='doors-bg-container'>
             </div>
             <div className='doors-page-content'>

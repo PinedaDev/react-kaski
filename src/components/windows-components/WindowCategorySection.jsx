@@ -2,14 +2,14 @@ import React from 'react'
 import "./css/WindowCategorySection.css"
 import WindowCart from './WindowCart'
 //
-import NavBar from '../global/NavBar'
-import OverlayMenu from '../global/OverlayMenu'
+import Navegation from "../navegation/Navegation"
 //
 import windImg1 from "./img/windows/Kaski_MSEA_ikkuna-kopio-scaled.jpg"
 import windImg2 from "./img/windows/MSEA_Thermo_musta.png"
 import windImg3 from "./img/windows/Kaski_MSEA_Thermo_PLUS-scaled.jpg"
 
-const WindowCategorySection = ({ defOverlay, showMenu, hideMenu }) => {
+
+const WindowCategorySection = () => {
     const windows = [
         {
             img: windImg1,
@@ -41,8 +41,7 @@ const WindowCategorySection = ({ defOverlay, showMenu, hideMenu }) => {
     ]
     return (
         <div className='category-section'>
-            <NavBar showMenu={showMenu} />
-            <OverlayMenu defOverlay={defOverlay} hideMenu={hideMenu} />
+            <Navegation />
             <div className='fix-content' id='top'>
                 <p className='category-section-first-text'>
                     Pienempiä lämmityskustannuksia ja vähemmän

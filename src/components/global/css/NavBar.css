@@ -12,6 +12,10 @@
     backdrop-filter: blur(10px);
 }
 
+.nav-bar a{
+    text-decoration: none;
+}
+
 .text-links {
     display: none;
 }
@@ -20,7 +24,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 10px;
+}
+.icon-links i{
+    margin: 0 .5rem;
 }
 .menu-icon {
     cursor: pointer;
@@ -28,27 +34,27 @@
     transition: .3s;
 }
 .menu-icon:hover {
-    color: #fff;
+    color: rgb(255, 2, 2);
 }
 .search-icon{
-    height: 30px;
+    color: #000;
+    font-size: 1.5em;
     border-bottom: 2px transparent;
     transition:all .5s ease-in-out;
 }
 .search-icon:hover{
-    margin: 0;
-    border-bottom: 2px solid #000;
+    color: rgb(255, 0, 0);
 }
-.cart-icon {
-    height: 35px;
+.store-icon {
+    color: #000;
+    font-size: 1.5em;
     border-bottom: 2px transparent;
     transition:all .5s ease-in-out;
 }
-.cart-icon:hover{
-    margin: 0;
-    border-bottom: 2px solid #000;
+.store-icon:hover{
+    color: rgb(245, 0, 0);
 }
-.basket-icon {
+.cart-icon {
     display: none;
     position: relative;
 }

@@ -1,6 +1,4 @@
 import React from 'react'
-import cartIcon from '../../img/icons/cart-icon.png'
-import searchIcon from '../../img/icons/search-icon.png'
 import KaskiLogo from './KaskiLogo'
 import { NavLink } from 'react-router-dom'
 import './css/NavBar.css'
@@ -19,7 +17,7 @@ const NavBar = (props) => {
 
     return (
         <div className='nav-bar'>
-            <KaskiLogo />
+            <NavLink className="nav-link" to="/" ><KaskiLogo /></NavLink>
             <div className='links'>
                 <div className='text-links'>
                     <NavLink className="nav-link" to="/" >Home</NavLink>
@@ -28,11 +26,13 @@ const NavBar = (props) => {
                     <NavLink className="nav-link" to="/company" >Company</NavLink>
                 </div>
                 <div className='icon-links'>
-                    <i><NavLink to="/online-store"><img className='cart-icon' src={cartIcon} alt="cart icon" /></NavLink></i>
-                    <i className="fas fa-shopping-basket basket-icon">
-                        {props.count == 0 ? "" : BasketCounter()}
-                    </i>
-                    <i><img className='search-icon' src={searchIcon} alt="search icon" /></i>
+                    <NavLink to="/online-store"><i className="fas fa-store store-icon"></i></NavLink>
+                    <NavLink to="/online-store/cart">
+                        <i className="fas fa-shopping-cart cart-icon">
+                            {props.count === 0 ? "" : BasketCounter()}
+                        </i>
+                    </NavLink>
+                    <NavLink to="/"><i className="fas fa-search search-icon"></i></NavLink>
                     <i onClick={props.showMenu} className="fas fa-ellipsis-v fa-2x menu-icon"></i>
                 </div>
             </div>
