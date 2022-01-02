@@ -23,20 +23,18 @@ const WindowCart = (props) => {
                 <div className='u-value'>
                     <div className='decorator-element'></div>
                     <p className='u-value-text'>
-                        U-Value {props.uValue}
+                        U-arvo {props.uValue}
                     </p>
                 </div>
                 <div className='sub-uValue-text'>
                     <p>
-                        Thermal insulation capacity U = {subTextValues[0]}
+                        Lämmöneristyskyky  U = {subTextValues[0]}
                     </p>
                     <p>
-                        Sound insulation = {subTextValues[1]}
+                        Ääneneristyskyky  = {subTextValues[1]}
                     </p>
                 </div>
-                <p className='window-category'>
-                    Category: "{props.category}"
-                </p>
+
                 <p className='window-description'>
                     {props.description}
                 </p>

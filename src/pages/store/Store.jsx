@@ -19,7 +19,7 @@ const Store = ({ addItems, storeItems, itemsInCart }) => {
         updateState()
     }, [])
     //Filter 
-    const categories = ["All", "windows", "doors", "parts"]
+    const categories = ["Kaikki", "Ikkunat", "Ovet", "Varaosat"]
     // set "ALl" as a default category
     const [currentCategory, setCategory] = useState(() => categories[0])
 
@@ -37,7 +37,7 @@ const Store = ({ addItems, storeItems, itemsInCart }) => {
 
     // show items 
     const showItems = () => {
-        if (currentCategory === "All") {
+        if (currentCategory === "Kaikki") {
             return (
                 storeItems.map((item) => {
                     return (

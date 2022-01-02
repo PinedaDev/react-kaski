@@ -54,7 +54,7 @@ const Windows = () => {
             <Navegation />
             <div className='windows-bg-container'></div>
             <div className='windows-page-content'>
-                <h1 className='page-header'>Ikkunat kortimausella laadulla</h1>
+                <h1 className='page-header'>Ikkunat kotimaisella laadulla</h1>
                 <p className='page-text'>
                     Sukupolvelta toiselle siirtynyt käsityöosaaminen ja moderni
                     tekniikka kohtaavat Kaski-ikkunoissa. Ne kestävät pohjoisen

@@ -28,11 +28,10 @@ function App() {
       price: 56.20,
       category: [{
         id: 1,
-        name: "windows",
+        name: "Ikkunat",
         description: "lorem ipsum..."
       }],
       amount: 1,
-      onCart: false
     },
     {
       id: 2,
@@ -40,11 +39,10 @@ function App() {
       price: 20,
       category: [{
         id: 2,
-        name: "doors",
+        name: "Ovet",
         description: "lorem ipsum..."
       }],
       amount: 1,
-      onCart: false
     },
     {
       id: 4,
@@ -52,16 +50,15 @@ function App() {
       price: 10,
       category: [{
         id: 2,
-        name: "doors",
+        name: "Ovet",
         description: "lorem ipsum..."
       },
       {
         id: 1,
-        name: "windows",
+        name: "Ikkunat",
         description: "lorem ipsum..."
       }],
       amount: 1,
-      onCart: false
     },
     {
       id: 3,
@@ -69,11 +66,10 @@ function App() {
       price: 35,
       category: [{
         id: 3,
-        name: "parts",
+        name: "Varaosat",
         description: "lorem ipsum..."
       }],
-      amount: 1,
-      onCart: false
+      amount: 1
     },
   ]
 
@@ -88,12 +84,10 @@ function App() {
 
   useEffect(() => {
     getList(serverItems)
-  })
+  }, [])
   //Basket
 
-
   const itemsInCart = [];
-
 
   const addItems = (elementId) => {
     return new Promise((resolve, reject) => {

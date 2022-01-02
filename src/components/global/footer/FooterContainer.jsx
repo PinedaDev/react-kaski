@@ -14,9 +14,9 @@ const FooterContainer = ({ containerTitle, content }) => {
 
     const dootsDiv = () => {
         return (
-            dootsList.map((dot) => {
+            dootsList.map((dot, i) => {
                 return (
-                    <div key={dot} className='doot'></div>
+                    <div key={i} className='doot'></div>
                 );
             })
         );

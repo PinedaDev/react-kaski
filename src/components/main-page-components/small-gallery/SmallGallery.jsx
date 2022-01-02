@@ -32,7 +32,7 @@ const SmallGallery = () => {
             <div className='imgs-container'>
                 {imgs()}
             </div>
-            <p className="link-to-gallery"><NavLink to="/pages/gallery">More +</NavLink></p>
+            <p className="link-to-gallery"><NavLink to="/pages/gallery">Lisää +</NavLink></p>
             <FooterWaveDivition />
         </div>
     )

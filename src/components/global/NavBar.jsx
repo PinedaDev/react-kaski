@@ -20,10 +20,9 @@ const NavBar = (props) => {
             <NavLink className="nav-link" to="/" ><KaskiLogo /></NavLink>
             <div className='links'>
                 <div className='text-links'>
-                    <NavLink className="nav-link" to="/" >Home</NavLink>
-                    <NavLink className="nav-link" to="/windows" >Windows</NavLink>
-                    <NavLink className="nav-link" to="/doors" >Doors</NavLink>
-                    <NavLink className="nav-link" to="/company" >Company</NavLink>
+                    <NavLink className="nav-link" to="/" >Etusivu</NavLink>
+                    <NavLink className="nav-link" to="/windows" >Ikkunat</NavLink>
+                    <NavLink className="nav-link" to="/doors" >Ovet</NavLink>
                 </div>
                 <div className='icon-links'>
                     <NavLink to="/online-store"><i className="fas fa-store store-icon"></i></NavLink>

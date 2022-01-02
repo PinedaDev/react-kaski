@@ -8,25 +8,25 @@ const OverlayMenu = ({ defOverlay, hideMenu }) => {
     const menuItems = [
         {
             id: "home",
-            name: 'Home',
+            name: 'Etusivu',
             link: '/',
             class: 'menu-item'
         },
         {
             id: "windows",
-            name: 'Windows',
+            name: 'Ikkunat',
             link: '/windows',
             class: 'menu-item'
         },
         {
             id: "doors",
-            name: 'Doors',
+            name: 'Ovet',
             link: '/doors',
             class: 'menu-item'
         },
         {
             id: "shop",
-            name: 'Shop',
+            name: 'Verkkokauppa',
             link: '/online-store',
             class: 'menu-item'
         }

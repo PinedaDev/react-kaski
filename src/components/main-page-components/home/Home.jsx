@@ -13,7 +13,7 @@ const Home = (props, ref) => {
                     <div className='decor-line'></div>
                     <span>Ikkunat ja ovet - Stiä maankuulua Kaski-laatua</span>
                 </div>
-                <p ref={ref}>Tunnelma tulee ikkunoista ja ovesta</p>
+                <p ref={ref}>Tunnelma tulee ikkunoista ja ovista</p>
 
                 <div className='mobile-links-container'>
                     <NavLink className="mobile-home-link" to="/pages/Windows">Windows</NavLink>

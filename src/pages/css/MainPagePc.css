@@ -7,7 +7,7 @@
         width: 20%;
     }
     /* navegation bar */
-    div.main-section .nav-bar {
+    div .nav-bar {
         position: absolute;
     }
     div.links {

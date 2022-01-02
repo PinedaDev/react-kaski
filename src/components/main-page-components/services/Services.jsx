@@ -6,7 +6,7 @@ const Services = () => {
     const servicesList = [
         {
             id: "service1",
-            text: "Kulluttajat",
+            text: "Kuluttajat",
             icon: "fas fa-house-user fa-3x",
             class: "service-box"
         },
@@ -24,13 +24,13 @@ const Services = () => {
         },
         {
             id: "service4",
-            text: "Jäkkeenmyyjät",
+            text: "Jälleenmyyjät",
             icon: "fas fa-industry fa-3x",
             class: "service-box"
         },
         {
             id: "service5",
-            text: "Rakenunusliikkeet",
+            text: "Rakennusliikkeet",
             icon: "fas fa-hard-hat fa-3x",
             class: "service-box"
         },
@@ -51,7 +51,7 @@ const Services = () => {
 
     return (
         <div className='services-section'>
-            <p>Services</p>
+            <p>Palvelut</p>
             <div className='services-container'>
                 {showServices()}
             </div>

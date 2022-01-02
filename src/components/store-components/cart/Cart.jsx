@@ -35,7 +35,6 @@ const Cart = ({ itemsInCart }) => {
             } else {
                 deleteItem(itemId).then(updateCart)
             }
-
             const error = false
 
             if (!error) {

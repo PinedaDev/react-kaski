@@ -1,10 +1,12 @@
 .window-cart {
     font-weight: bold;
     color: #fff;
-    background: linear-gradient(rgb(228, 49, 49), rgb(240, 94, 10));
+    background: linear-gradient(rgb(228, 78, 78), rgb(221, 107, 41));
     width: 100%;
     border-radius: 20px;
     box-shadow: 6px 6px 6px rgba(7, 7, 7, 0.342);
+    font-size: 1.3em;
+    font-weight:lighter;
 }
 .window-img-container {
     margin-top: 2rem;
@@ -26,7 +28,7 @@
 .u-value {
     display: flex;
     align-items: center;
-
+    font-weight: bold;
 }
 .decorator-element {
     display: inline-block;
