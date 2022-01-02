@@ -5,35 +5,29 @@ import StoreItem from '../../components/store-components/StoreItem';
 import Filter from '../../components/store-components/filter/Filter';
 
 import './css/Store.css'
-import { get } from 'jquery';
 
-const Store = ({ defOverlay, addItems, storeItems, itemsInCart, showMenu, hideMenu }) => {
+const Store = ({ defOverlay, clearCartList, addItems, storeItems, itemsInCart, showMenu, hideMenu }) => {
 
     //Filter 
     const categories = ["All", "windows", "doors", "parts"]
-    //render the filter options
-    const filterOptions = () => {
-        return (
-            categories.map((category) => {
-                return (
-                    <div key={category} onClick={() => changeCategory(category)} className={"filter-option " + category}><p>{category}</p></div>
-                );
-            })
-        );
-    };
     // set "ALl" as a default category
     const [currentCategory, setCategory] = useState(() => categories[0])
 
-    const changeCategory = (cat) => {
-        setCategory(cat)
-    };
-    // filter items and store them in a list
-    const filteredItems = storeItems.filter((item) => {
-        if (item.category === currentCategory) {
+    function updateCurrentCategory(category) {
+        setCategory(category)
+    }
+
+    //show all the items when the current category is All if it's not use the 
+    //filtered item list to render de itmes
+    const filteredItems = storeItems.filter((element) => {
+        if (element.category.includes(currentCategory)) {
             return true
         }
     });
 
+
+    // Set an store  page state to update it when
+    // user click on add+/remove item from the cart
     const [storeState, setStoreState] = useState(false)
 
     const updateState = () => {
@@ -44,47 +38,48 @@ const Store = ({ defOverlay, addItems, storeItems, itemsInCart, showMenu, hideMe
         }
     }
 
-    console.log(itemsInCart)
 
-    //show all the items when the current category is All if it's not use the filtered item list to render de itmes
+    // show items 
     const showItems = () => {
-
-        if (currentCategory == "All") {
+        if (currentCategory === "All") {
             return (
                 storeItems.map((item) => {
                     return (
                         <StoreItem
+                            key={item.id}
+                            id={item.id}
                             addItems={addItems}
                             updateState={updateState}
-                            id={item.id}
-                            key={item.id}
-                            price={item.price}
                             storeItemName={item.name}
-                            category={item.category} />
-                    );
+                            price={item.price}
+                            onCart={item.onCart}
+                        />
+                    )
                 })
-            );
+            )
         } else {
             return (
                 filteredItems.map((item) => {
                     return (
                         <StoreItem
-                            id={item.id}
                             key={item.id}
-                            price={item.price}
+                            id={item.id}
+                            addItems={addItems}
+                            updateState={updateState}
                             storeItemName={item.name}
-                            category={item.category} />
-                    );
+                            price={item.price}
+                            onCart={item.onCart}
+                        />
+                    )
                 })
-            );
+            )
         }
     }
-
     return (
         <div className='store-page'>
-            <NavBar showMenu={showMenu} count={itemsInCart.length} />
-            <OverlayMenu defOverlay={defOverlay} hideMenu={hideMenu} />
-            <Filter activeCategory={currentCategory} filterOptions={filterOptions} />
+            <NavBar updateState={updateState} showMenu={showMenu} count={itemsInCart.length} />
+            <OverlayMenu updateState={updateState} defOverlay={defOverlay} hideMenu={hideMenu} />
+            <Filter categories={categories} currentCategory={currentCategory} updateCurrentCategory={updateCurrentCategory} />
             <div className='store-items-container'>
                 {showItems()}
             </div>

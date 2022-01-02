@@ -2,8 +2,9 @@ import React from 'react'
 import './css/OverlayMenu.css'
 import { AiOutlineClose } from "react-icons/ai"
 import { NavLink } from 'react-router-dom'
+import { useEffect } from 'react/cjs/react.development'
 
-const OverlayMenu = ({ defOverlay, hideMenu }) => {
+const OverlayMenu = ({ defOverlay, hideMenu, updateState }) => {
 
     const menuItems = [
         {

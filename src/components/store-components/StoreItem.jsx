@@ -54,6 +54,7 @@ const StoreItem = (props) => {
                     onHover={onAddHover}
                     mouseOut={mouseOutAdd}
                     state={addBtn}
+                    onCart={props.onCart}
                     id={props.id}
                     addItems={props.addItems}
                     updateState={props.updateState} />

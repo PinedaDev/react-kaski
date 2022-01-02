@@ -16,6 +16,7 @@ import {
   Routes,
   Route
 } from "react-router-dom";
+import { useEffect } from 'react/cjs/react.development';
 
 
 function App() {
@@ -46,42 +47,76 @@ function App() {
     setOverlayStateState(overlayVisible)
   }
 
-  const storeItems = [
+  const serverItems = [
     {
-      id: "1",
+      id: 1,
       name: "The Window",
       price: 10,
-      category: "windows",
+      category: [{
+        id: 1,
+        name: "windows",
+        description: "lorem ipsum..."
+      }],
       amount: 1,
       onCart: false
     },
     {
-      id: "2",
+      id: 2,
       name: "The Door",
-      price: 15,
-      category: "doors",
+      price: 10,
+      category: [{
+        id: 2,
+        name: "doors",
+        description: "lorem ipsum..."
+      }],
       amount: 1,
       onCart: false
     },
     {
-      id: "3",
+      id: 4,
+      name: "The Door with a window",
+      price: 10,
+      category: [{
+        id: 2,
+        name: "doors",
+        description: "lorem ipsum..."
+      },
+      {
+        id: 1,
+        name: "windows",
+        description: "lorem ipsum..."
+      }],
+      amount: 1,
+      onCart: false
+    },
+    {
+      id: 3,
       name: "The Part",
-      price: 5,
-      category: "parts",
-      amount: 1,
-      onCart: false
-    },
-    {
-      id: "4",
-      name: "another Part",
-      price: 5,
-      category: "parts",
+      price: 10,
+      category: [{
+        id: 3,
+        name: "parts",
+        description: "lorem ipsum..."
+      }],
       amount: 1,
       onCart: false
     },
   ]
 
+  const storeItems = []
+
+  const getList = (list) => {
+    list.forEach((item) => {
+      item.category = item.category.map(category => category.name)
+      storeItems.push(item)
+    })
+  }
+
+  useEffect(() => {
+    getList(serverItems)
+  })
   //Basket
+
 
   const itemsInCart = [];
 
@@ -89,9 +124,7 @@ function App() {
   const addItems = (elementId) => {
     return new Promise((resolve, reject) => {
 
-      let itemIndex;
-
-      let targetItem = storeItems.filter((item, i) => {
+      let targetItem = serverItems.filter((item, i) => {
         if (item.id === elementId) {
           return true
         }
@@ -117,6 +150,8 @@ function App() {
       }
     });
   }
+
+  console.log(storeItems)
 
   return (
     <Router>

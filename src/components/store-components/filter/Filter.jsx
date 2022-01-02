@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './css/Filter.css'
 
-const Filter = ({ filterOptions, activeCategory }) => {
+const Filter = (props) => {
 
     const dropDownStates = [
         {
@@ -17,16 +17,42 @@ const Filter = ({ filterOptions, activeCategory }) => {
     ]
     const [isVisible, setFilterState] = useState(false)
 
+    // Set an store  page state to update it when
+    // user click on add+/remove item from the cart
+    const [filterState, setStoreState] = useState(false)
+
+    /*
+    const updateState = () => {
+        if (!filterState) {
+            setStoreState(true)
+        } else {
+            setStoreState(!filterState)
+        }
+    } */
 
 
     return (
         <div className='filter'>
             <div onClick={() => setFilterState(!isVisible)} className='active-category'>
-                {activeCategory}
+                {props.currentCategory}
                 <i className="fas fa-level-down-alt"></i>
             </div>
             <div style={isVisible ? dropDownStates[1] : dropDownStates[0]} className='filter-dropdown'>
-                {filterOptions()}
+                {
+                    props.categories.map((category, i) => {
+                        return (
+                            <div
+                                key={i}
+                                onClick={() => props.updateCurrentCategory(category)}
+                                className={"filter-option " + category}>
+                                <p>
+                                    {category}
+                                </p>
+                            </div>
+
+                        )
+                    })
+                }
             </div>
         </div>
     )
