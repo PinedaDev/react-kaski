@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
+//global
+import Navegation from './components/navegation/Navegation';
+import LoadingScreen from './components/global/LoadingScreen'
 //pages
 import MainPage from './pages/MainPage';
 import Store from './pages/store/Store';
@@ -13,12 +16,11 @@ import Doors from './pages/doors/Doors';
 import DoorSection from './components/doors-components/door-category-section/DoorSection';
 //Routing 
 import {
-  BrowserRouter as Router,
   Routes,
-  Route
+  Route,
 } from "react-router-dom";
-import { useEffect } from 'react/cjs/react.development';
-
+//Transitions
+import { AnimatePresence } from 'framer-motion'
 
 function App() {
   const serverItems = [
@@ -116,45 +118,46 @@ function App() {
       }
     });
   }
-
   console.log(storeItems)
-
   return (
-    <Router>
-      <Routes>
-        <Route
-          path="/"
-          element={<MainPage />} />
+    <div>
+      <LoadingScreen />
+      <AnimatePresence >
+        <Routes>
+          <Route
+            path="/"
+            element={<MainPage />} />
 
-        <Route
-          path="/online-store"
-          element={<Store
-            itemsInCart={itemsInCart}
-            storeItems={storeItems}
-            addItems={addItems} />} />
+          <Route
+            path="/online-store"
+            element={<Store
+              itemsInCart={itemsInCart}
+              storeItems={storeItems}
+              addItems={addItems} />} />
 
-        <Route
-          path="/online-store/cart"
-          element={<Cart
-            itemsInCart={itemsInCart} />} />
+          <Route
+            path="/online-store/cart"
+            element={<Cart
+              itemsInCart={itemsInCart} />} />
 
-        <Route
-          path="/windows"
-          element={<Windows />} />
+          <Route
+            path="/windows"
+            element={<Windows />} />
 
-        <Route
-          path="/windows/avattavat-ikkunat"
-          element={<WindowCategorySection />} />
+          <Route
+            path="/windows/avattavat-ikkunat"
+            element={<WindowCategorySection />} />
 
-        <Route
-          path="/doors"
-          element={<Doors />} />
+          <Route
+            path="/doors"
+            element={<Doors />} />
 
-        <Route
-          path="/doors/door-section"
-          element={<DoorSection />} />
-      </Routes>
-    </Router>
+          <Route
+            path="/doors/door-section"
+            element={<DoorSection />} />
+        </Routes>
+      </AnimatePresence>
+    </div >
   )
 }
 

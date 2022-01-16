@@ -10,18 +10,23 @@ import Home from '../components/main-page-components/home/Home'
 import Services from '../components/main-page-components/services/Services'
 import SmallGallery from '../components/main-page-components/small-gallery/SmallGallery'
 import FooterSection from '../components/global/footer/FooterSection'
-
+//
+import AnimatedComponent from '../components/global/AnimatedComponent'
 
 const MainPage = () => {
     const homeRef = useRef(null)
     return (
-        <div className='main-page'>
+        <div>
             <HomeNavegation homeRef={homeRef} />
-            {/* sections */}
-            <Home ref={homeRef} />
-            <Services />
-            <SmallGallery />
-            <FooterSection />
+            <AnimatedComponent>
+                <div className='main-page'>
+                    {/* sections */}
+                    <Home ref={homeRef} />
+                    <Services />
+                    <SmallGallery />
+                    <FooterSection />
+                </div>
+            </AnimatedComponent>
         </div>
     )
 }

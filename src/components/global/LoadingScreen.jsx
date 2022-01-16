@@ -15,7 +15,7 @@ const LoadingScreen = () => {
     const [loadScreenState, setLoadScreenState] = useState(() => loading)
 
     useEffect(() => {
-        setTimeout(() => setLoadScreenState(loaded), 1000)
+        setTimeout(() => setLoadScreenState(loaded), 1500)
     }, [])
 
     return (

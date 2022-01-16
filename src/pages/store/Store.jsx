@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import StoreItem from '../../components/store-components/StoreItem';
 import Filter from '../../components/store-components/filter/Filter';
 import Navegation from '../../components/navegation/Navegation';
-
 import './css/Store.css'
+import AnimatedComponent from '../../components/global/AnimatedComponent';
 
 const Store = ({ addItems, storeItems, itemsInCart }) => {
     const [storeState, setStoreState] = useState(false)
@@ -75,10 +75,12 @@ const Store = ({ addItems, storeItems, itemsInCart }) => {
     return (
         <div className='store-page'>
             <Navegation count={itemsInCart.length} />
-            <Filter categories={categories} currentCategory={currentCategory} updateCurrentCategory={updateCurrentCategory} />
-            <div className='store-items-container'>
-                {showItems()}
-            </div>
+            <AnimatedComponent>
+                <Filter categories={categories} currentCategory={currentCategory} updateCurrentCategory={updateCurrentCategory} />
+                <div className='store-items-container'>
+                    {showItems()}
+                </div>
+            </AnimatedComponent>
         </div>
     )
 }

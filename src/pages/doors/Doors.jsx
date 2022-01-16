@@ -4,7 +4,7 @@ import "./css/Doors.css"
 import "./css/Doors-PC.css"
 //global components
 import Navegation from '../../components/navegation/Navegation'
-
+import AnimatedComponent from '../../components/global/AnimatedComponent'
 //imgs
 //category container backgrounds
 import Img1 from "./img/categories-container/door-cat-1.jpg"
@@ -46,39 +46,39 @@ const Doors = () => {
     return (
         <div className='doors-page'>
             <Navegation />
-            <div className='doors-bg-container'>
-            </div>
-            <div className='doors-page-content'>
-
-                <h1 className='page-header'>Ulko-ovi - siitä Kaskipuu tunnetaan</h1>
-                <p className='page-text'>
-                    Kaskipuu valmistaa kotimaisia ulko-ovia ja muita ovia suomalaisiin koteihin.
-                    Alusta alkaen pohjoissuomalaisen perheyhtiön perustana on ollut laadukkaat,
-                    käsintehdyt puuovet. Ensimmäisten, perustaja Eero Kasken valmistamien ulko-ovien laatu ja
-                    tunnelma seuraavat mukana kaikissa Kasken tuotteissa - säilyen puusepältä asiakkaan
-                    jälkipolville asti. Huolella valittu ulko-ovi täydentää talon arkkitehtuuria ja on
-                    sopusoinnussa ilmeen kanssa: ulkoa päin se antaa leimansa talon luonteelle, sisältä päin se on
-                    osa eteistilan ilmettä. Ovi on portti, josta perhe kulkee ulos ja vieraat kutsutaan sisään.
-                    Kaskilaiset ovat tunnustettuja muotoilun ammattilaisia ja käsityön osaajia, jotka ymmärtävät mikä
-                    merkitys heidän työllään on asiakkaalle - sinulle.
-                </p>
-                <div className='categories-container'>
-                    {categories.map((category, i) => {
-                        return (
-                            <NavLink to="/doors/door-section">
-                                <div style={{
-                                    background: `linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(${category.img})`,
-                                    backgroundPosition: "center",
-                                    backgroundSize: "cover",
-                                }}
-                                    key={i} className='category-container'>
-                                    <p className='category-name'>{category.name}</p>
-                                </div>
-                            </NavLink>
-                        )
-                    })}
+            <AnimatedComponent>
+                <div className='doors-bg-container'></div>
+                <div className='doors-page-content'>
+                    <h1 className='page-header'>Ulko-ovi - siitä Kaskipuu tunnetaan</h1>
+                    <p className='page-text'>
+                        Kaskipuu valmistaa kotimaisia ulko-ovia ja muita ovia suomalaisiin koteihin.
+                        Alusta alkaen pohjoissuomalaisen perheyhtiön perustana on ollut laadukkaat,
+                        käsintehdyt puuovet. Ensimmäisten, perustaja Eero Kasken valmistamien ulko-ovien laatu ja
+                        tunnelma seuraavat mukana kaikissa Kasken tuotteissa - säilyen puusepältä asiakkaan
+                        jälkipolville asti. Huolella valittu ulko-ovi täydentää talon arkkitehtuuria ja on
+                        sopusoinnussa ilmeen kanssa: ulkoa päin se antaa leimansa talon luonteelle, sisältä päin se on
+                        osa eteistilan ilmettä. Ovi on portti, josta perhe kulkee ulos ja vieraat kutsutaan sisään.
+                        Kaskilaiset ovat tunnustettuja muotoilun ammattilaisia ja käsityön osaajia, jotka ymmärtävät mikä
+                        merkitys heidän työllään on asiakkaalle - sinulle.
+                    </p>
+                    <div className='categories-container'>
+                        {categories.map((category, i) => {
+                            return (
+                                <NavLink to="/doors/door-section">
+                                    <div style={{
+                                        background: `linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(${category.img})`,
+                                        backgroundPosition: "center",
+                                        backgroundSize: "cover",
+                                    }}
+                                        key={i} className='category-container'>
+                                        <p className='category-name'>{category.name}</p>
+                                    </div>
+                                </NavLink>
+                            )
+                        })}
+                    </div>
                 </div>
-            </div>
+            </AnimatedComponent>
         </div>
     )
 }
