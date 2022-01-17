@@ -44,7 +44,7 @@ const StoreItem = (props) => {
     }
 
     return (
-        <div style={{ background: props.background }} className={"store-item all " + props.category}>
+        <div style={{ background: props.background, backgroundPosition: "center", backgroundSize: "cover" }} className={"store-item all " + props.category}>
             <div className="store-item-top">
                 <StoreBuyBtn
                     onHover={onBuyHover}

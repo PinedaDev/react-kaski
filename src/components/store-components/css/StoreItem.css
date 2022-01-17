@@ -7,6 +7,8 @@
     height: 15rem;
     width: 15rem;
     border-radius: 20px;
+    background-position: center;
+    background-size: cover;
     transition: all .3s;
     box-shadow: 8px 8px 10px rgba(20, 23, 37, 0.6);
     font-family: "Montserrat", sans-serif;

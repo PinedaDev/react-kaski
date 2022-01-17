@@ -94,6 +94,7 @@ const Cart = ({ itemsInCart }) => {
                         {
                             itemsInCart.map((item) =>
                                 <CartItem
+                                    background={`url(${item.image})`}
                                     increaseAmount={increaseAmount}
                                     decreaseAmount={decreaseAmount}
                                     deleteItem={deleteItem}

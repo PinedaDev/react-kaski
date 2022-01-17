@@ -19,7 +19,6 @@ import {
 } from "react-router-dom";
 //Transitions
 import { AnimatePresence } from 'framer-motion'
-import { data, error } from 'jquery';
 
 function App() {
 
@@ -73,9 +72,9 @@ function App() {
           itemsInCart.splice(index, 1)
         }
         targetItem[0].onCart = false
-        targetItem[0].amount = 1
       } else {
         targetItem[0].onCart = true
+        targetItem[0].amount = 1
         itemsInCart.push(targetItem[0])
       }
 

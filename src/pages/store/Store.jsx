@@ -53,6 +53,7 @@ const Store = ({ addItems, storeItems, itemsInCart }) => {
                     storeItems.map(item => {
                         return (
                             <StoreItem
+                                background={`url(${item.image})`}
                                 key={item.id}
                                 id={item.id}
                                 addItems={addItems}
@@ -70,6 +71,7 @@ const Store = ({ addItems, storeItems, itemsInCart }) => {
                     filtered_items.map(item => {
                         return (
                             <StoreItem
+                                background={`url(${item.image})`}
                                 key={item.id}
                                 id={item.id}
                                 addItems={addItems}
@@ -86,7 +88,6 @@ const Store = ({ addItems, storeItems, itemsInCart }) => {
         }
 
     }
-
     return (
         <div className='store-page'>
             <Navegation count={itemsInCart.length} />
