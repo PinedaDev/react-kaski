@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 //global
-import Navegation from './components/navegation/Navegation';
 import LoadingScreen from './components/global/LoadingScreen'
 //pages
 import MainPage from './pages/MainPage';
@@ -10,7 +9,6 @@ import Cart from './components/store-components/cart/Cart';
 //windows components
 import Windows from './pages/windows/Windows';
 import WindowCategorySection from './components/windows-components/WindowCategorySection';
-//---------------
 //doors components
 import Doors from './pages/doors/Doors';
 import DoorSection from './components/doors-components/door-category-section/DoorSection';
@@ -21,72 +19,45 @@ import {
 } from "react-router-dom";
 //Transitions
 import { AnimatePresence } from 'framer-motion'
+import { data, error } from 'jquery';
 
 function App() {
-  const serverItems = [
-    {
-      id: 1,
-      name: "The Window",
-      price: 56.20,
-      category: [{
-        id: 1,
-        name: "Ikkunat",
-        description: "lorem ipsum..."
-      }],
-      amount: 1,
-    },
-    {
-      id: 2,
-      name: "The Door",
-      price: 20,
-      category: [{
-        id: 2,
-        name: "Ovet",
-        description: "lorem ipsum..."
-      }],
-      amount: 1,
-    },
-    {
-      id: 4,
-      name: "The Door with a window",
-      price: 10,
-      category: [{
-        id: 2,
-        name: "Ovet",
-        description: "lorem ipsum..."
-      },
-      {
-        id: 1,
-        name: "Ikkunat",
-        description: "lorem ipsum..."
-      }],
-      amount: 1,
-    },
-    {
-      id: 3,
-      name: "The Part",
-      price: 35,
-      category: [{
-        id: 3,
-        name: "Varaosat",
-        description: "lorem ipsum..."
-      }],
-      amount: 1
-    },
-  ]
 
-  const storeItems = []
+  const [serverItems, setServerItems] = useState(null)
+  const [storeItems, setStoreItems] = useState(null)
+  const url = "http://127.0.0.1:8000/api/products/"
+
+  useEffect(() => {
+    fetch(url)
+      .then(response => response.json())
+      .then(data => setServerItems(data))
+  }, [])
 
   const getList = (list) => {
-    list.forEach((item) => {
-      item.category = item.category.map(category => category.name)
-      storeItems.push(item)
+    return new Promise((resolve, reject) => {
+
+      if (list) {
+        list.forEach((item) => {
+          item.category_id = item.category_id.map(category => category.name)
+          a.push(item)
+        })
+      }
+      const error = false
+
+      if (!error) {
+        resolve()
+      } else {
+        reject("Error: Something wrong")
+      }
     })
   }
 
+  const a = []
+
   useEffect(() => {
     getList(serverItems)
-  }, [])
+      .then(setStoreItems(a))
+  }, [serverItems])
   //Basket
 
   const itemsInCart = [];
@@ -94,8 +65,7 @@ function App() {
   const addItems = (elementId) => {
     return new Promise((resolve, reject) => {
 
-      let targetItem = serverItems.filter((item) => item.id === elementId ? true : "")
-
+      let targetItem = storeItems.filter((item) => item.id === elementId ? true : "")
 
       if (itemsInCart.includes(targetItem[0])) {
         const index = itemsInCart.indexOf(targetItem[0])
@@ -118,7 +88,6 @@ function App() {
       }
     });
   }
-  console.log(storeItems)
   return (
     <div>
       <LoadingScreen />

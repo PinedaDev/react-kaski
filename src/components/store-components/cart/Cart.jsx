@@ -4,6 +4,7 @@ import Navegation from '../../navegation/Navegation'
 import CartItem from './cart-item/CartItem'
 import { NavLink } from 'react-router-dom'
 import AnimatedComponent from '../../global/AnimatedComponent'
+import { useEffect } from 'react/cjs/react.development'
 const Cart = ({ itemsInCart }) => {
 
     //const itemsInCart = itemsInCart
@@ -75,7 +76,14 @@ const Cart = ({ itemsInCart }) => {
         }
     }
 
-    itemsInCart.forEach(item => sum += item.price * item.amount)
+    if (itemsInCart != []) {
+        itemsInCart.forEach(item => sum += item.price * item.amount)
+    }
+
+    useEffect(() => {
+        updateCart()
+        console.log(itemsInCart)
+    }, [])
 
     return (
         <AnimatedComponent>
@@ -105,7 +113,7 @@ const Cart = ({ itemsInCart }) => {
                         Ostoskori
                     </h1>
                     <h2 className='sum'>
-                        Summa: {sum}.00€
+                        Summa: {sum} €
                     </h2>
 
                     <button className='checkout-btn'>CHECKOUT!</button>

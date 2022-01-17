@@ -22,7 +22,7 @@ const FooterSection = () => {
             subtext: "Ma-Pe 8-15"
         },
         {
-            id: "3",
+            id: "4",
             subtext: "Puhelun hinnat: 8,35 snt/puhelu + 16,69 snt/min"
         },
     ]
