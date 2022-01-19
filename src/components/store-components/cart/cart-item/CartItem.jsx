@@ -14,7 +14,7 @@ const CartItem = ({ background, price, amount, increaseAmount, deleteItem, decre
             </div>
             <div className='cart-item-price cart-item-section'>
                 <p>Hinta</p>
-                <p className='cart-item-content '>{price}.00€</p>
+                <p className='cart-item-content '>{price} €</p>
             </div>
             <div className='cart-item-qty cart-item-section'>
                 <p>Määrä</p>

@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import StoreItem from '../../components/store-components/StoreItem';
+import StoreItemDetails from '../../components/store-components/StoreItemDetails';
 import Filter from '../../components/store-components/filter/Filter';
 import Navegation from '../../components/navegation/Navegation';
 import './css/Store.css'
 import AnimatedComponent from '../../components/global/AnimatedComponent';
+import { error } from 'jquery';
 
-const Store = ({ addItems, storeItems, itemsInCart }) => {
+const Store = ({ itemDetails, getItemDetails, cleanUpItemDetails, addItems, storeItems, itemsInCart }) => {
+
     const [storeState, setStoreState] = useState(false)
-
     const updateState = () => {
         if (!storeState) {
             setStoreState(true)
@@ -40,11 +42,9 @@ const Store = ({ addItems, storeItems, itemsInCart }) => {
             set_filtered_items([])
         }
     }, [currentCategory])
-    // Set an store  page state to update it when
-    // user click on add+/remove item from the cart
 
-
-    // show items 
+    // show items conditionaly using the list that contain all the items if 
+    // the filter doesnt have a specific category selected
 
     const show_items = () => {
         if (storeItems) {
@@ -56,6 +56,11 @@ const Store = ({ addItems, storeItems, itemsInCart }) => {
                                 background={`url(${item.image})`}
                                 key={item.id}
                                 id={item.id}
+
+                                showDetailsOver={showDetailsOver}
+                                getItemDetails={getItemDetails}
+                                stateOfWindowDetails={stateOfWindowDetails}
+
                                 addItems={addItems}
                                 updateState={updateState}
                                 storeItemName={item.name}
@@ -74,6 +79,7 @@ const Store = ({ addItems, storeItems, itemsInCart }) => {
                                 background={`url(${item.image})`}
                                 key={item.id}
                                 id={item.id}
+                                showDetailsOver={showDetailsOver}
                                 addItems={addItems}
                                 updateState={updateState}
                                 storeItemName={item.name}
@@ -88,13 +94,71 @@ const Store = ({ addItems, storeItems, itemsInCart }) => {
         }
 
     }
+
+    const [detailsOver, setDetailsOver] = useState(false)
+    const [detailsWindow, setDetailsWindow] = useState(false)
+
+    function showDetailsOver() {
+        return new Promise((resolve, reject) => {
+
+            setDetailsOver(true)
+
+            const error = false
+            if (!error) {
+                resolve()
+            } else {
+                reject("Error: Something so wrong")
+            }
+        })
+    }
+    function closeDetailsOverlay() {
+        return new Promise((resolve, reject) => {
+
+            setDetailsOver(!detailsOver)
+
+            const error = false
+            if (!error) {
+                resolve()
+            } else {
+                reject("Error: Something so wrong")
+            }
+        })
+    }
+    function stateOfWindowDetails() {
+        return new Promise((resolve, reject) => {
+
+            if (!detailsWindow) {
+                setDetailsWindow(true)
+            } else {
+                setDetailsWindow(!detailsWindow)
+            }
+
+            const error = false
+            if (!error) {
+                resolve()
+            } else {
+                reject("Error: Something so wrong")
+            }
+        })
+    }
+    console.log(itemDetails)
     return (
         <div className='store-page'>
             <Navegation count={itemsInCart.length} />
             <AnimatedComponent>
                 <Filter categories={categories} currentCategory={currentCategory} updateCurrentCategory={updateCurrentCategory} />
-                <div className='store-items-container'>
+                <div className='store-items-container '>
                     {show_items()}
+                </div>
+                <div className={'item-details-overlay ' + (!detailsOver ? "details-overlay-hidden" : "details-overlay-visible")}>
+                    <StoreItemDetails
+                        addItems={addItems}
+                        updateState={updateState}
+                        details={itemDetails ? itemDetails[0] : ""}
+                        closeDetailsOverlay={closeDetailsOverlay}
+                        cleanUpItemDetails={cleanUpItemDetails}
+                        state={detailsWindow}
+                        stateOfWindowDetails={stateOfWindowDetails} />
                 </div>
             </AnimatedComponent>
         </div>

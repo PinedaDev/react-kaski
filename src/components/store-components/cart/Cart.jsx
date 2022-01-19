@@ -82,7 +82,6 @@ const Cart = ({ itemsInCart }) => {
 
     useEffect(() => {
         updateCart()
-        console.log(itemsInCart)
     }, [])
 
     return (

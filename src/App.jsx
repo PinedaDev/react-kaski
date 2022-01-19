@@ -32,12 +32,14 @@ function App() {
       .then(data => setServerItems(data))
   }, [])
 
+
   const getList = (list) => {
     return new Promise((resolve, reject) => {
 
       if (list) {
         list.forEach((item) => {
           item.category_id = item.category_id.map(category => category.name)
+          item.onCart = false
           a.push(item)
         })
       }
@@ -51,7 +53,7 @@ function App() {
     })
   }
 
-  const a = []
+  let a = []
 
   useEffect(() => {
     getList(serverItems)
@@ -59,7 +61,7 @@ function App() {
   }, [serverItems])
   //Basket
 
-  const itemsInCart = [];
+  let itemsInCart = [];
 
   const addItems = (elementId) => {
     return new Promise((resolve, reject) => {
@@ -87,6 +89,32 @@ function App() {
       }
     });
   }
+
+  let itemDetails = []
+
+  function getItemDetails(itemID) {
+    return new Promise((resolve, reject) => {
+      let targetItemDetails = storeItems.filter(item => item.id === itemID ? true : "")
+      itemDetails.push(targetItemDetails[0])
+      const error = false
+      if (!error) {
+        resolve()
+      } else {
+        reject("Error")
+      }
+    })
+  }
+  function cleanUpItemDetails() {
+    return new Promise((resolve, reject) => {
+      itemDetails.pop()
+      const error = false
+      if (!error) {
+        resolve()
+      } else {
+        reject("Error")
+      }
+    })
+  }
   return (
     <div>
       <LoadingScreen />
@@ -99,6 +127,9 @@ function App() {
           <Route
             path="/online-store"
             element={<Store
+              itemDetails={itemDetails}
+              getItemDetails={getItemDetails}
+              cleanUpItemDetails={cleanUpItemDetails}
               itemsInCart={itemsInCart}
               storeItems={storeItems}
               addItems={addItems} />} />

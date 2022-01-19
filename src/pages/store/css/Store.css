@@ -3,7 +3,7 @@
     background: linear-gradient(rgba(221, 42, 42, 0.5),rgba(212, 43, 43, 0.548)), url('../../../img/backgrounds/store.jpg');
     background-position: center;
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
 }
 div.store-page .nav-bar .store-icon {
@@ -66,7 +66,27 @@ div.store-page .nav-bar .cart-icon:hover {
     background: none;
     backdrop-filter: none;  
 }
-
+.item-details-overlay {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, .4);
+    backdrop-filter: blur(5px);
+    z-index: 5;
+    transition: .3s;
+}
+.details-overlay-hidden {
+    opacity: 0;
+    visibility: hidden;
+    height: 0%;
+}
+.details-overlay-visible {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+}
 @media only screen and (min-width: 700px) {
     .store-items-container {
         grid-template-columns: 1fr 1fr; 

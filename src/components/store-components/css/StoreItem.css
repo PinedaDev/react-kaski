@@ -15,11 +15,38 @@
 }
 
 .store-item:hover {
-    margin-top: 2em;
+    transform: translate(0, -5%);
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
 }
-
+.store-item-overlay{
+    transition: .3s;
+    position: absolute;
+    border-radius: 20px;
+    display: grid;
+    place-items: center;
+    height: 15rem;
+    width: 15rem;
+}
+.details-btn {
+    transition: .3s;
+    padding: .5em;
+    background: linear-gradient(#F94444, #B94A4A);
+    border: none;
+    border-radius: 15px;
+    font-size: 1em;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.6);
+}
+.details-btn:hover {
+    background: linear-gradient(#44a81c, #56be26);
+    color: #fff;
+    box-shadow: 0px 0px 20px #fff;
+}
 /* item top section  */
+.store-item-top {
+    position: absolute;
+    width: 100%;
+}
 /* inside btn  */
 .store-item-btn {
     display: flex; 
