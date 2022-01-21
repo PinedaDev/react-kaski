@@ -80,6 +80,35 @@ const Cart = ({ itemsInCart }) => {
         itemsInCart.forEach(item => sum += item.price * item.amount)
     }
 
+    function checkOutSection() {
+        if (itemsInCart.length === 0) {
+            return (
+                <h1
+                    style={{ color: "black" }}
+                    className='cart-main-header'>
+                    Ostoskori on tyhjä
+                </h1>
+            )
+        } else {
+            return (
+                <>
+                    <h1
+                        style={{ color: "black" }}
+                        className='cart-main-header'>
+                        Ostoskori
+                    </h1>
+                    <h2 className='sum'>
+                        Summa: {sum} €
+                    </h2>
+
+                    <button className='checkout-btn'>Pay!</button>
+                    <i className="fas fa-shopping-basket fa-7x basket-icon"></i>
+                    <NavLink to="/online-store"><button className='back-to-store'>Takaisin</button></NavLink>
+                </>
+            )
+        }
+    }
+    console.log(itemsInCart)
     useEffect(() => {
         updateCart()
     }, [])
@@ -107,18 +136,7 @@ const Cart = ({ itemsInCart }) => {
                 </div>
                 <div className='checkout-section'>
                     <div className='divition-line'></div>
-                    <h1
-                        style={{ color: "black" }}
-                        className='cart-main-header'>
-                        Ostoskori
-                    </h1>
-                    <h2 className='sum'>
-                        Summa: {sum} €
-                    </h2>
-
-                    <button className='checkout-btn'>CHECKOUT!</button>
-                    <i className="fas fa-shopping-basket fa-7x basket-icon"></i>
-                    <NavLink to="/online-store"><button className='back-to-store'>Takaisin</button></NavLink>
+                    {checkOutSection()}
                 </div>
             </div>
         </AnimatedComponent>

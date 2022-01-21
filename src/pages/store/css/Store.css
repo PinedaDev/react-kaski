@@ -67,8 +67,6 @@ div.store-page .nav-bar .cart-icon:hover {
     backdrop-filter: none;  
 }
 .item-details-overlay {
-    display: grid;
-    place-items: center;
     position: absolute;
     top: 0;
     width: 100%;

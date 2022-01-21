@@ -9,13 +9,13 @@
 
 .cart-items-section {
     background: linear-gradient(#FF1C1C, #B94A4A);
-    min-height: 100vh;
+    min-height: 10vh;
 }
 
 .checkout-section {
     background: #fff;
     color: #000;
-    min-height: 100vh;
+    min-height: 90vh;
 }
 
 .divition-line {

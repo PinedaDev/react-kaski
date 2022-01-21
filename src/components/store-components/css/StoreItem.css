@@ -30,15 +30,14 @@
 .details-btn {
     transition: .3s;
     padding: .5em;
-    background: linear-gradient(#F94444, #B94A4A);
+    background: #f13939;
     border: none;
-    border-radius: 15px;
+    border-radius: 10px;
     font-size: 1em;
-    font-weight: bold;
-    color: rgba(255, 255, 255, 0.6);
+    color: #fff;
 }
 .details-btn:hover {
-    background: linear-gradient(#44a81c, #56be26);
+    background: #0f0;
     color: #fff;
     box-shadow: 0px 0px 20px #fff;
 }
