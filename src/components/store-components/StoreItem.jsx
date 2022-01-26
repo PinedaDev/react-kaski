@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import StoreBuyBtn from './StoreBuyBtn'
 import StoreAddBtn from './StoreAddBtn';
-import StoreItemDetails from './StoreItemDetails';
 import "./css/StoreItem.css"
 
 const StoreItem = (props) => {
@@ -44,20 +43,6 @@ const StoreItem = (props) => {
         setAddState(prevState => prevState = defaultState)
     }
 
-    // item window overlay overlay 
-    const [detailsWindowState, setDetailsWindowState] = useState(false)
-
-    function openDetailsWindow() {
-        setDetailsWindowState(true)
-    }
-    function closeDetailsWindow() {
-        setDetailsWindowState(!detailsWindowState)
-    }
-
-    // The itemOverlayState difine the extra class is going to have
-    // the item wraper the first two const asing the value to the wraper 
-    // through the style propertie
-
     const onItemOverlay = {
         opacity: "1",
         background: "rgba(0,0,0,.3)",
@@ -98,7 +83,11 @@ const StoreItem = (props) => {
                 <StoreBuyBtn
                     onHover={onBuyHover}
                     mouseOut={mouseOutBuy}
-                    state={buyBtn} />
+                    state={buyBtn}
+                    id={props.id}
+                    addItems={props.addItems}
+                    updateState={props.updateState} />
+
                 <StoreAddBtn
                     onHover={onAddHover}
                     mouseOut={mouseOutAdd}

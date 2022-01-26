@@ -1,5 +1,6 @@
 import React from 'react'
 import { AiOutlineClose } from "react-icons/ai";
+import { NavLink } from 'react-router-dom';
 import './css/StoreItemDetails.css'
 
 const StoreItemDetails = (props) => {
@@ -53,7 +54,12 @@ const StoreItemDetails = (props) => {
                                 Price: {details.price}
                             </h3>
                             <div className='btns-wraper'>
-                                <button className='details-btn details-window-btn'>Buy</button>
+                                <NavLink
+                                    className='details-btn details-window-btn'
+                                    to='/online-store/cart'
+                                    onClick={() => props.addItems(details.id, 1).then(props.updateState)}>
+                                    Buy
+                                </NavLink>
                                 <button
                                     className='details-btn details-window-btn'
                                     onClick={() => props.addItems(details.id).then(props.updateState)}>

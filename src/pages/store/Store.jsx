@@ -5,7 +5,6 @@ import Filter from '../../components/store-components/filter/Filter';
 import Navegation from '../../components/navegation/Navegation';
 import './css/Store.css'
 import AnimatedComponent from '../../components/global/AnimatedComponent';
-import { error } from 'jquery';
 
 const Store = ({ itemDetails, getItemDetails, cleanUpItemDetails, addItems, storeItems, itemsInCart }) => {
 
@@ -17,9 +16,6 @@ const Store = ({ itemDetails, getItemDetails, cleanUpItemDetails, addItems, stor
             setStoreState(!storeState)
         }
     }
-    useEffect(() => {
-        updateState()
-    }, [])
     //Filter 
     const categories = ["All", "Windows", "Doors", "Parts"]
     // set "ALl" as a default category
@@ -79,7 +75,11 @@ const Store = ({ itemDetails, getItemDetails, cleanUpItemDetails, addItems, stor
                                 background={`url(${item.image})`}
                                 key={item.id}
                                 id={item.id}
+
                                 showDetailsOver={showDetailsOver}
+                                getItemDetails={getItemDetails}
+                                stateOfWindowDetails={stateOfWindowDetails}
+
                                 addItems={addItems}
                                 updateState={updateState}
                                 storeItemName={item.name}
@@ -141,7 +141,6 @@ const Store = ({ itemDetails, getItemDetails, cleanUpItemDetails, addItems, stor
             }
         })
     }
-    console.log(itemDetails)
     return (
         <div className='store-page'>
             <Navegation count={itemsInCart.length} />

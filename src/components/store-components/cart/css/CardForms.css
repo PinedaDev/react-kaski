@@ -1,0 +1,86 @@
+.card-forms {
+    display: grid;
+    place-items: center;
+}
+.card-forms input[type = "text"] {
+    background: none;
+    border: transparent;
+    border-bottom: 1px solid white;
+    color: white;
+    transition: .4s;
+}
+.card-forms input[type = "text"]:focus{
+    outline: none;
+    background-color: rgba(0,0,0,.5);
+}
+.card-form {
+    position: relative;
+    text-align: left;
+    padding: 1rem;
+    display: grid;
+    margin: 1rem 0;
+    height: 12rem;
+    width: 17rem;
+    background-image: url(../img/card-form.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow:  0 0 10px white;
+}
+.card-form p {
+    color: white;
+    margin-top: 2.5rem;
+    margin-bottom: 0;
+    font-size: 1.3em;
+}
+.card-forms-hidden {
+    height: 0%;
+    opacity: 0;
+    visibility: hidden;
+}
+.card-forms-visible {
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+}
+
+.exp-date-input {
+    position: absolute;
+    font-size: .6em;
+    top:50%;
+    left: 75%;
+}
+.cvc-code-input {
+    font-size: 1em;
+}
+.exp-date-input input,
+.cvc-code-input input {
+    text-align: center;
+    width: 100%;
+}
+
+.cvc-code-input,
+.exp-date-input {
+    width: 4rem;
+    text-align: center;
+}
+
+.card-mask {
+    width: calc(110% + 4px);
+    height: 3rem;
+    background-color: rgba(0,0,0,.5);
+    transform: translateX(-5%);
+}
+
+.pay-btn {
+    width: 70%;
+    font-size: 1.5em;
+    font-weight: bold;
+    transition: .3s;
+    border: none;
+    padding: .5rem;
+    border-radius: 20px;
+    color: white;
+    background-color: #202020;
+    box-shadow: 0 0 20px rgb(255, 255, 255);
+}

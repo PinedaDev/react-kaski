@@ -24,7 +24,7 @@ function App() {
 
   const [serverItems, setServerItems] = useState(null)
   const [storeItems, setStoreItems] = useState(null)
-  const url = "http://127.0.0.1:8000/api/products/"
+  const url = "https://django-rest-api-ecommerce.herokuapp.com/api/products/"
 
   useEffect(() => {
     fetch(url)
@@ -63,21 +63,31 @@ function App() {
 
   let itemsInCart = [];
 
-  const addItems = (elementId) => {
+  function addItems(elementId, toggle) {
     return new Promise((resolve, reject) => {
-
+      toggle = toggle || 0
       let targetItem = storeItems.filter((item) => item.id === elementId ? true : "")
 
-      if (itemsInCart.includes(targetItem[0])) {
-        const index = itemsInCart.indexOf(targetItem[0])
-        if (index > -1) {
-          itemsInCart.splice(index, 1)
+      if (toggle === 1) {
+        if (itemsInCart.includes(targetItem[0])) {
+          return null
+        } else {
+          targetItem[0].onCart = true
+          targetItem[0].amount = 1
+          itemsInCart.push(targetItem[0])
         }
-        targetItem[0].onCart = false
       } else {
-        targetItem[0].onCart = true
-        targetItem[0].amount = 1
-        itemsInCart.push(targetItem[0])
+        if (itemsInCart.includes(targetItem[0])) {
+          const index = itemsInCart.indexOf(targetItem[0])
+          if (index > -1) {
+            itemsInCart.splice(index, 1)
+          }
+          targetItem[0].onCart = false
+        } else {
+          targetItem[0].onCart = true
+          targetItem[0].amount = 1
+          itemsInCart.push(targetItem[0])
+        }
       }
 
       const error = false

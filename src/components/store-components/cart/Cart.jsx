@@ -4,7 +4,9 @@ import Navegation from '../../navegation/Navegation'
 import CartItem from './cart-item/CartItem'
 import { NavLink } from 'react-router-dom'
 import AnimatedComponent from '../../global/AnimatedComponent'
-import { useEffect } from 'react/cjs/react.development'
+import PayMethodsWindow from './PayMethodsWindow'
+import CardForms from './CardForms'
+import { AiOutlineClose } from "react-icons/ai";
 const Cart = ({ itemsInCart }) => {
 
     //const itemsInCart = itemsInCart
@@ -17,7 +19,7 @@ const Cart = ({ itemsInCart }) => {
         return new Promise((resolve, reject) => {
             let targetItem = itemsInCart.filter((item) => item.id === itemId ? true : "")
             targetItem[0].amount += 1
-            console.log(itemsInCart)
+
 
             const error = false
 
@@ -76,11 +78,57 @@ const Cart = ({ itemsInCart }) => {
         }
     }
 
-    if (itemsInCart != []) {
+    if (itemsInCart !== []) {
         itemsInCart.forEach(item => sum += item.price * item.amount)
     }
+    // Payment process 
+    const [paymentOverlay, setPaymentOvr] = useState(false)
+    const [paymentWind, setPaymentWind] = useState(false)
+    const [cardForm, setCardFormState] = useState(false)
 
-    function checkOutSection() {
+    function togglePaymentOvr(statement, setFunct) {
+        return new Promise((resolve, reject) => {
+            if (!statement) {
+                setFunct(true)
+            } else {
+                setFunct(!statement)
+            }
+            const error = false
+
+            if (!error) {
+                resolve()
+            } else {
+                reject("Error: Something went wrong")
+            }
+        })
+    }
+    function closeElement(elm_state, setFunct) {
+        return new Promise((resolve, reject) => {
+
+            setFunct = setFunct || null
+
+            if (!elm_state) {
+                setFunct(false)
+            } else {
+                setFunct(!elm_state)
+            }
+            const error = false
+
+            if (!error) {
+                resolve()
+            } else {
+                reject("Error: Something went wrong")
+            }
+        })
+    }
+
+    function closeAlloverlay() {
+        closeElement(cardForm, setCardFormState)
+            .then(() => closeElement(paymentWind, setPaymentWind))
+            .then(() => closeElement(paymentOverlay, setPaymentOvr))
+    }
+
+    const PaymentSection = () => {
         if (itemsInCart.length === 0) {
             return (
                 <h1
@@ -101,17 +149,20 @@ const Cart = ({ itemsInCart }) => {
                         Summa: {sum} €
                     </h2>
 
-                    <button className='checkout-btn'>Pay!</button>
+                    <button
+                        className='checkout-btn'
+                        onClick={() => togglePaymentOvr(paymentOverlay, setPaymentOvr).then(() =>
+                            togglePaymentOvr(paymentWind, setPaymentWind))}>
+                        Pay!
+                    </button>
                     <i className="fas fa-shopping-basket fa-7x basket-icon"></i>
                     <NavLink to="/online-store"><button className='back-to-store'>Takaisin</button></NavLink>
                 </>
             )
         }
     }
-    console.log(itemsInCart)
-    useEffect(() => {
-        updateCart()
-    }, [])
+
+
 
     return (
         <AnimatedComponent>
@@ -136,7 +187,16 @@ const Cart = ({ itemsInCart }) => {
                 </div>
                 <div className='checkout-section'>
                     <div className='divition-line'></div>
-                    {checkOutSection()}
+                    {PaymentSection()}
+                </div>
+                <div className={'payment-ovr ' + (!paymentOverlay ? "payment-ovr-hidden" : "payment-ovr-visible")}>
+                    <AiOutlineClose
+                        className='cls-payment'
+                        onClick={closeAlloverlay}>
+                    </AiOutlineClose>
+                    <PayMethodsWindow state1={paymentWind} state2={cardForm} setFunct1={setPaymentWind} setFunct2={setCardFormState} toggleFunct={togglePaymentOvr} />
+                    <CardForms state={cardForm} toggleFunct={togglePaymentOvr} setFunct={setCardFormState} />
+                    <h1 style={{ color: "white" }}>Total: {sum}€</h1>
                 </div>
             </div>
         </AnimatedComponent>

@@ -77,7 +77,7 @@ const Windows = () => {
                                             backgroundSize: "cover"
                                         }}
                                             key={i}
-                                            className='category-container'>
+                                            className='window-category-container'>
                                             <p className='category-name'>
                                                 {category.name}
                                             </p>

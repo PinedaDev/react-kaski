@@ -1,6 +1,6 @@
 @media only screen and (min-width: 700px) {
     .windows-bg-container {
-        background: linear-gradient(rgba(255, 0, 0, 0.45),rgba(255,0,0,0.45)),url(../../../img/backgrounds/windows-bg.jpg);
+        background: linear-gradient(rgba(255, 0, 0, .3),rgba(255,0,0,.3)),url(../../../img/backgrounds/windows-bg.jpg);
         background-position: center;
         background-size: cover;
         height: 100vh;

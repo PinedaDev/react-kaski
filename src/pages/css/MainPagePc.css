@@ -114,7 +114,7 @@
         font-size: 10em;
     }
     div.service-box p {
-        font-size: 1em;
+        font-size: 1.3em;
     }
     /* Samall gallery */
     div.small-gallery-section p {
@@ -176,7 +176,7 @@
     }
     div .service-box  {
         margin: 0 2rem;
-        height: 12rem;
-        width: 12rem;
+        height: 15rem;
+        width: 15rem;
     }
 }
