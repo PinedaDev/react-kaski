@@ -26,7 +26,7 @@ Abraham: -(interface) make the main page responsive;
 ###9: Update the Working on section on this file to keep teammates on track of 
     your work 
 
-#10: Remember take a brake between code session and play some game ;) 
+#10: Remember take a brake between code session and play some game ;) (Dotaaa)
 
 ####################
 ###   ########    ##
