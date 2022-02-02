@@ -16,8 +16,8 @@ const Home = (props, ref) => {
                 <p ref={ref}>Tunnelma tulee ikkunoista ja ovista</p>
 
                 <div className='mobile-links-container'>
-                    <NavLink className="mobile-home-link" to="/pages/Windows">Windows</NavLink>
-                    <NavLink className="mobile-home-link" to="/pages/Doors">Doors</NavLink>
+                    <NavLink className="mobile-home-link" to="/windows">Windows</NavLink>
+                    <NavLink className="mobile-home-link" to="/doors">Doors</NavLink>
                 </div>
             </div>
             <img className='girl-home-picture' src={girlPhoto} alt="girl at the window" />

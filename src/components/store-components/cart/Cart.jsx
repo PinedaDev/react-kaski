@@ -12,7 +12,7 @@ const Cart = ({ itemsInCart }) => {
     //const itemsInCart = itemsInCart
 
     const [carState, setCartState] = useState(false)
-
+    console.log(itemsInCart)
     let sum = 0
 
     function increaseAmount(itemId) {
@@ -173,7 +173,6 @@ const Cart = ({ itemsInCart }) => {
                         {
                             itemsInCart.map((item) =>
                                 <CartItem
-                                    background={`url(${item.image})`}
                                     increaseAmount={increaseAmount}
                                     decreaseAmount={decreaseAmount}
                                     deleteItem={deleteItem}
@@ -181,7 +180,8 @@ const Cart = ({ itemsInCart }) => {
                                     id={item.id}
                                     key={item.id}
                                     price={item.price}
-                                    amount={item.amount} />)
+                                    amount={item.amount}
+                                    category={item.category_id} />)
                         }
                     </div>
                 </div>
@@ -196,7 +196,6 @@ const Cart = ({ itemsInCart }) => {
                     </AiOutlineClose>
                     <PayMethodsWindow state1={paymentWind} state2={cardForm} setFunct1={setPaymentWind} setFunct2={setCardFormState} toggleFunct={togglePaymentOvr} />
                     <CardForms state={cardForm} toggleFunct={togglePaymentOvr} setFunct={setCardFormState} />
-                    <h1 style={{ color: "white" }}>Total: {sum}€</h1>
                 </div>
             </div>
         </AnimatedComponent>

@@ -31,7 +31,6 @@ const NavBar = (props) => {
                             {props.count === 0 ? "" : BasketCounter()}
                         </i>
                     </NavLink>
-                    <NavLink to="/"><i className="fas fa-search search-icon"></i></NavLink>
                     <i onClick={props.showMenu} className="fas fa-ellipsis-v fa-2x menu-icon"></i>
                 </div>
             </div>

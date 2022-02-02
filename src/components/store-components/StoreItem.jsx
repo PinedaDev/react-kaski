@@ -71,7 +71,7 @@ const StoreItem = (props) => {
         <div
             onMouseOver={onOverlay}
             onMouseOut={offOverlay}
-            style={{ background: props.background, backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover" }} className={"store-item all " + props.category}>
+            className={"store-item all " + props.category}>
             <div style={itemOverlayState} className='store-item-overlay'>
                 <button
                     onClick={() => props.getItemDetails(props.id).then(props.showDetailsOver).then(props.stateOfWindowDetails)}
@@ -106,9 +106,6 @@ const StoreItem = (props) => {
     )
 };
 
-StoreItem.defaultProps = {
-    background: "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5))",
-    category: ""
-}
+
 
 export default StoreItem;

@@ -2,6 +2,9 @@
     display: grid;
     place-items: center;
 }
+.card-forms h1,.card-forms h2 {
+    margin: 0;
+}
 .card-forms input[type = "text"] {
     background: none;
     border: transparent;

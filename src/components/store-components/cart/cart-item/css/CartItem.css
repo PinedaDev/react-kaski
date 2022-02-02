@@ -8,12 +8,22 @@
     height: 9rem;
     margin: 1rem 0;
 }
-
+.Windows {
+    background: url(./img/Big\ Window.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.Doors {
+    background: url(./img/Big\ Door.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 .product-img {
     height: 5rem;
     width: 5rem;
     border-radius: 50%;
-    background: white;
 }
 
 .cart-item-delete i {

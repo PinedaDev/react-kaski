@@ -1,7 +1,7 @@
 
 .door-cart {
     background-color: rgba(0,0,0,.2);
-    border-radius: 67;
+    border-radius: 20px;
     padding: 1rem;
     width: 80%;
     transition: .4s;

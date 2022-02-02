@@ -2,19 +2,6 @@ import React, { useState } from 'react';
 import './css/CardForms.css'
 
 const CardForms = ({ state, closeAlloverlay }) => {
-  const [paymentState, setPaymentState] = useState(false)
-
-  function pay() {
-    return new Promise((resolve, reject) => {
-      setPaymentState(true)
-      const error = false
-      if (!error) {
-        resolve()
-      } else {
-        reject("Error: Something went wrong")
-      }
-    })
-  }
 
   return (
     <div className={'card-forms' + " " + (!state ? "card-forms-hidden" : "card-forms-visible")}>
@@ -39,15 +26,12 @@ const CardForms = ({ state, closeAlloverlay }) => {
           <div className='card-mask'></div>
           <div className='cvc-code-input'>
             <p>cvc</p>
-            <input type="text" name="back_card_code" id="cvc-code" placeholder='CVV' />
+            <input type="text" name="back_card_code" id="cvc-code" required placeholder='CVV' />
             <label htmlFor="cvc-code"></label>
           </div>
         </div>
-        <button onClick={() => pay()} className='pay-btn' type="button">Pay</button>
+        <button className='pay-btn' type="submit">Pay</button>
       </form>
-      <div>
-        <h2 style={{ transition: ".4s", opacity: (!paymentState ? "0" : "1"), color: "#0F0" }}>Succsesfull Payment</h2>
-      </div>
     </div>
   )
 };

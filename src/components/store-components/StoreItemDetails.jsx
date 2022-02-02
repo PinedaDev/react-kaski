@@ -6,10 +6,11 @@ import './css/StoreItemDetails.css'
 const StoreItemDetails = (props) => {
 
     const details = props.details
+
     function show_item_details() {
         if (details) {
             return (
-                <div className='details-window'>
+                <div className='details-window '>
                     <header>
                         <h1>
                             {details.name}
@@ -27,12 +28,7 @@ const StoreItemDetails = (props) => {
                     <main>
                         {/* img section */}
                         <div>
-                            <div className='details-img-container'
-                                style={{
-                                    backgroundImage: `url(${details.image})`,
-                                    backgroundSize: 'cover',
-                                    backgroundPosition: 'center'
-                                }}>
+                            <div className={'details-img-container ' + details.category_id[0]}>
                             </div>
                             <div className='color-selection'>
                                 {/* feature for future */}

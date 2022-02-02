@@ -1,15 +1,14 @@
 import React from 'react'
 import './css/CartItem.css'
 
-const CartItem = ({ background, price, amount, increaseAmount, deleteItem, decreaseAmount, updateCart, id }) => {
+const CartItem = ({ category, price, amount, increaseAmount, deleteItem, decreaseAmount, updateCart, id }) => {
 
 
     return (
         <div className='cart-item'>
             <div className='cart-item-product cart-item-section'>
                 <p>Tuote</p>
-                <div className='product-img cart-item-content'
-                    style={{ background: background, backgroundPosition: "center", backgroundSize: "cover" }}>
+                <div className={'product-img cart-item-content ' + category[0]}>
                 </div>
             </div>
             <div className='cart-item-price cart-item-section'>

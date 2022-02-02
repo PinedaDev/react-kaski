@@ -17,6 +17,11 @@ const Filter = (props) => {
     ]
     const [isVisible, setFilterState] = useState(false)
 
+    function update_filter(callback, category) {
+        props.updateCurrentCategory(category)
+        callback(!isVisible)
+    }
+
     return (
         <div className='filter'>
             <div onClick={() => setFilterState(!isVisible)} className='active-category'>
@@ -29,8 +34,8 @@ const Filter = (props) => {
                         return (
                             <div
                                 key={i}
-                                onClick={() => props.updateCurrentCategory(category)}
-                                className={"filter-option " + category}>
+                                onClick={() => update_filter(setFilterState, category)}
+                                className={"filter-option"}>
                                 <p>
                                     {category}
                                 </p>

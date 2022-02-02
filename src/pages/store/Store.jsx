@@ -6,7 +6,10 @@ import Navegation from '../../components/navegation/Navegation';
 import './css/Store.css'
 import AnimatedComponent from '../../components/global/AnimatedComponent';
 
+
 const Store = ({ itemDetails, getItemDetails, cleanUpItemDetails, addItems, storeItems, itemsInCart }) => {
+
+
 
     const [storeState, setStoreState] = useState(false)
     const updateState = () => {
@@ -49,7 +52,7 @@ const Store = ({ itemDetails, getItemDetails, cleanUpItemDetails, addItems, stor
                     storeItems.map(item => {
                         return (
                             <StoreItem
-                                background={`url(${item.image})`}
+
                                 key={item.id}
                                 id={item.id}
 
@@ -72,7 +75,7 @@ const Store = ({ itemDetails, getItemDetails, cleanUpItemDetails, addItems, stor
                     filtered_items.map(item => {
                         return (
                             <StoreItem
-                                background={`url(${item.image})`}
+
                                 key={item.id}
                                 id={item.id}
 

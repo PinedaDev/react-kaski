@@ -23,7 +23,19 @@ div.store-page .nav-bar .cart-icon:hover {
     color: rgb(255, 0, 0);
 
 }
-/* item conatiner  */
+/* item conatiner img  */
+.Windows {
+    background: url(./img/Big\ Window.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.Doors {
+    background: url(./img/Big\ Door.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 
 /* width */
 .store-items-container::-webkit-scrollbar {
