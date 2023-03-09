@@ -71,7 +71,7 @@ const StoreItem = (props) => {
         <div
             onMouseOver={onOverlay}
             onMouseOut={offOverlay}
-            className={"store-item all " + props.category}>
+            className={`store-item all ${props.category}`} >
             <div style={itemOverlayState} className='store-item-overlay'>
                 <button
                     onClick={() => props.getItemDetails(props.id).then(props.showDetailsOver).then(props.stateOfWindowDetails)}

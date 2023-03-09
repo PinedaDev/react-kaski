@@ -24,13 +24,13 @@ div.store-page .nav-bar .cart-icon:hover {
 
 }
 /* item conatiner img  */
-.Windows {
+.windows {
     background: url(./img/Big\ Window.jpg);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
 }
-.Doors {
+.doors {
     background: url(./img/Big\ Door.jpg);
     background-position: center;
     background-size: contain;

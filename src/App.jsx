@@ -22,15 +22,62 @@ import { AnimatePresence } from 'framer-motion'
 
 function App() {
 
-  const [serverItems, setServerItems] = useState(null)
+  // const [serverItems, setServerItems] = useState(null)
   const [storeItems, setStoreItems] = useState(null)
   const url = "https://django-rest-api-ecommerce.herokuapp.com/api/products/"
 
-  useEffect(() => {
-    fetch(url)
-      .then(response => response.json())
-      .then(data => setServerItems(data))
-  }, [])
+  const serverItems = [
+    {
+      id: 1,
+      name: "Regular Window",
+      price: 200,
+      category_id: [{
+        id: 1,
+        name: "windows",
+        description: "lorem ipsum..."
+      }],
+      amount: 1
+    },
+    {
+      id: 2,
+      name: "Cheaper Window",
+      price: 150,
+      category_id: [{
+        id: 1,
+        name: "windows",
+        description: "lorem ipsum..."
+      }],
+      amount: 1
+    },
+    {
+      id: 3,
+      name: "Better Door",
+      price: 350,
+      category_id: [{
+        id: 2,
+        name: "doors",
+        description: "lorem ipsum..."
+      }],
+      amount: 1
+    },
+    {
+      id: 4,
+      name: "Regular Door",
+      price: 300,
+      category_id: [{
+        id: 2,
+        name: "doors",
+        description: "lorem ipsum..."
+      }],
+      amount: 1
+    }
+  ]
+
+  // useEffect(() => {
+  //   fetch(url)
+  //     .then(response => response.json())
+  //     .then(data => setServerItems(data))
+  // }, [])
 
 
   const getList = (list) => {
@@ -38,7 +85,7 @@ function App() {
 
       if (list) {
         list.forEach((item) => {
-          item.category_id = item.category_id.map(category => category.name)
+          item.category = item.category_id.map(category => category.name)
           item.onCart = false
           a.push(item)
         })
@@ -58,8 +105,11 @@ function App() {
   useEffect(() => {
     getList(serverItems)
       .then(setStoreItems(a))
-  }, [serverItems])
+  }, [])
   //Basket
+
+  useEffect(() => {
+  }, [storeItems])
 
   let itemsInCart = [];
 

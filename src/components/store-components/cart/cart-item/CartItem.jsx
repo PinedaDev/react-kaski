@@ -8,7 +8,7 @@ const CartItem = ({ category, price, amount, increaseAmount, deleteItem, decreas
         <div className='cart-item'>
             <div className='cart-item-product cart-item-section'>
                 <p>Tuote</p>
-                <div className={'product-img cart-item-content ' + category[0]}>
+                <div className={'product-img cart-item-content ' + category[0].name}>
                 </div>
             </div>
             <div className='cart-item-price cart-item-section'>

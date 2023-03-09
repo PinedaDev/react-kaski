@@ -34,7 +34,7 @@ const Store = ({ itemDetails, getItemDetails, cleanUpItemDetails, addItems, stor
     const [filtered_items, set_filtered_items] = useState([])
 
     useEffect(() => {
-        if (currentCategory !== "All") {
+        if (currentCategory !== "all") {
             const filter = storeItems.filter(item => item.category_id[0] === currentCategory ? true : "")
             set_filtered_items(filter)
         } else {
@@ -63,7 +63,7 @@ const Store = ({ itemDetails, getItemDetails, cleanUpItemDetails, addItems, stor
                                 addItems={addItems}
                                 updateState={updateState}
                                 storeItemName={item.name}
-                                category={item.category_id[0]}
+                                category={item.category_id[0].name}
                                 price={item.price}
                                 onCart={item.onCart}
                             />
@@ -148,7 +148,6 @@ const Store = ({ itemDetails, getItemDetails, cleanUpItemDetails, addItems, stor
         <div className='store-page'>
             <Navegation count={itemsInCart.length} />
             <AnimatedComponent>
-                <Filter categories={categories} currentCategory={currentCategory} updateCurrentCategory={updateCurrentCategory} />
                 <div className='store-items-container '>
                     {show_items()}
                 </div>

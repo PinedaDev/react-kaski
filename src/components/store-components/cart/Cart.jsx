@@ -12,7 +12,6 @@ const Cart = ({ itemsInCart }) => {
     //const itemsInCart = itemsInCart
 
     const [carState, setCartState] = useState(false)
-    console.log(itemsInCart)
     let sum = 0
 
     function increaseAmount(itemId) {

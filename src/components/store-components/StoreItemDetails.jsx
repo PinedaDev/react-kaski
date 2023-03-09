@@ -6,7 +6,6 @@ import './css/StoreItemDetails.css'
 const StoreItemDetails = (props) => {
 
     const details = props.details
-
     function show_item_details() {
         if (details) {
             return (
@@ -28,7 +27,7 @@ const StoreItemDetails = (props) => {
                     <main>
                         {/* img section */}
                         <div>
-                            <div className={'details-img-container ' + details.category_id[0]}>
+                            <div className={`details-img-container ${details.category}`}>
                             </div>
                             <div className='color-selection'>
                                 {/* feature for future */}
@@ -43,8 +42,8 @@ const StoreItemDetails = (props) => {
                             <h2>
                                 Description:
                             </h2>
-                            <p style={{ fontSize: (details.description.lenght > 30 ? ".4em" : "1em") }}>
-                                {details.description}
+                            <p style={{ fontSize: (details.category_id[0].description.length > 30 ? ".4em" : "1em") }}>
+                                {details.category_id[0].description}
                             </p>
                             <h3>
                                 Price: {details.price}
